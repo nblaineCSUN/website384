@@ -1,0 +1,42 @@
+body {
+    background-color: #E3DAC9;
+}
+/*Top Rectangle Container*/
+.top-rect {
+    width: 100%; /*or specific with pixels (px) */
+    height: 200px;
+    background-color: #7DA27E;
+    position: fixed; /*To place precisely on top */
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 100; /* Ensure this rect appears on top of other elements */
+    border-bottom: 3px solid black;
+}
+
+.fruitpics {
+    margin-top: 220px; /*Below top rect */
+    display: flex;
+    justify-content: space-around; /*even spaceing between edges */
+    align-items: center;
+    padding: 40px;
+}
+/*Format image itself*/
+.fruitpics img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+/*align image inside of figure block*/
+.fruitpics figure {
+  text-align: center;
+  margin: 0;
+}
+/*Fruit button style*/
+.fruit-button-class {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
