@@ -13,30 +13,72 @@ body {
     z-index: 100; /* Ensure this rect appears on top of other elements */
     border-bottom: 3px solid black;
 }
+#title {
+  font-size: 100px;
+  text-align: center;
+  margin-top: 50px;
+  font-weight: bold;
+}
 
-.fruitpics {
+/*----------FIRST ROW OF FRUIT PICS----------*/
+.fruitpics1 {
     margin-top: 220px; /*Below top rect */
+    margin-left: 500px;
+    margin-right: 500px;
     display: flex;
     justify-content: space-around; /*even spaceing between edges */
     align-items: center;
     padding: 40px;
 }
 /*Format image itself*/
-.fruitpics img {
+.fruitpics1 img {
     width: 200px;
     height: 200px;
     border: 2px solid black;
     border-radius: 8px;
 }
 /*align image inside of figure block*/
-.fruitpics figure {
+.fruitpics1 figure {
   text-align: center;
   margin: 0;
 }
 /*Fruit button style*/
-.fruit-button-class {
-  margin-top: 10px;
-  font-size: 18px;
+.fruit1-button-class {
+  display: flex;
+  font-size: 24px;
   font-weight: bold;
   color: #333;
+  text-align: center;
+  justify-content: space-around;
+}
+/*----------SECOND ROW OF FRUIT PICS----------*/
+.fruitpics2 {
+    margin-top: 0; /*Below top rect and first pic row */
+    margin-left: 500px;
+    margin-right: 500px;
+    display: flex;
+    justify-content: space-around; /*even spaceing between edges */
+    align-items: center;
+    padding: 40px;
+}
+/*Format image itself*/
+.fruitpics2 img {
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+/*align image inside of figure block*/
+.fruitpics2 figure {
+  text-align: center;
+  margin: 0;
+}
+/*Fruit button style*/
+.fruit2-button-class {
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  justify-content: space-around;
 }
