@@ -1,0 +1,23 @@
+:root { --header-h: clamp(72px, 12vw, 160px); } /* scales with viewport */
+body {
+    margin: 0; 
+    padding-top: calc(var(--header-h) + 16px);  /* push content below header */
+    background-color: #EFB923;
+}
+
+#title {
+  margin: 0;
+  line-height: 1.1;
+  font-size: clamp(28px, 8vw, 72px);    /* scale title instead of fixed 100px */
+}
+
+.top-rect {
+  background-color: #965A3E;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--header-h);              /* responsive header height */
+  display: flex; align-items: center;   /* vertical centering */
+  justify-content: center;              /* horizontal centering */
+  border: 3px solid black;
+  padding: 4px;;
+}
