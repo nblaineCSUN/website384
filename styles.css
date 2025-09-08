@@ -2,14 +2,20 @@
 
 /* 1) Make the fixed header play nicely with all screens */
 :root { --header-h: clamp(72px, 12vw, 160px); } /* scales with viewport */
-body { margin: 0; padding-top: calc(var(--header-h) + 16px); } /* push content below header */
+body { 
+  margin: 0; 
+  padding-top: calc(var(--header-h) + 16px);  /* push content below header */
+  background-color: #ECBD8E;
+} 
 
 .top-rect {
+  background-color: #00aee4;
   position: fixed;
   top: 0; left: 0; right: 0;
   height: var(--header-h);              /* responsive header height */
   display: flex; align-items: center;   /* vertical centering */
   justify-content: center;              /* horizontal centering */
+  border: 4px solid black;
 }
 
 #title {
@@ -18,6 +24,10 @@ body { margin: 0; padding-top: calc(var(--header-h) + 16px); } /* push content b
   font-size: clamp(28px, 8vw, 72px);    /* scale title instead of fixed 100px */
 }
 
+.bottom-rect {
+  background-color: #ECBD8E;
+  border: 4px solid white;
+}
 /* 2) Replace huge left/right margins with a centered, flexible container */
 .fruitpics1,
 .fruitpics2 {
