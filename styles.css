@@ -1,85 +1,65 @@
-body {
-    background-color: #E3DAC9;
-}
-/*Rando git test*/
-/*Top Rectangle Container*/
+/* === Responsive fixes === */
+
+/* 1) Make the fixed header play nicely with all screens */
+:root { --header-h: clamp(72px, 12vw, 160px); } /* scales with viewport */
+body { margin: 0; padding-top: calc(var(--header-h) + 16px); } /* push content below header */
+
 .top-rect {
-    width: 100%; /*or specific with pixels (px) */
-    height: 200px;
-    background-color: #7DA27E;
-    position: fixed; /*To place precisely on top */
-    top: 0;
-    left: 0;
-    text-align: center;
-    z-index: 100; /* Ensure this rect appears on top of other elements */
-    border-bottom: 3px solid black;
-}
-#title {
-  font-size: 100px;
-  text-align: center;
-  margin-top: 50px;
-  font-weight: bold;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--header-h);              /* responsive header height */
+  display: flex; align-items: center;   /* vertical centering */
+  justify-content: center;              /* horizontal centering */
 }
 
-/*----------FIRST ROW OF FRUIT PICS----------*/
-.fruitpics1 {
-    margin-top: 220px; /*Below top rect */
-    margin-left: 500px;
-    margin-right: 500px;
-    display: flex;
-    justify-content: space-around; /*even spaceing between edges */
-    align-items: center;
-    padding: 40px;
-}
-/*Format image itself*/
-.fruitpics1 img {
-    width: 200px;
-    height: 200px;
-    border: 2px solid black;
-    border-radius: 8px;
-}
-/*align image inside of figure block*/
-.fruitpics1 figure {
-  text-align: center;
+#title {
   margin: 0;
+  line-height: 1.1;
+  font-size: clamp(28px, 8vw, 72px);    /* scale title instead of fixed 100px */
 }
-/*Fruit button style*/
-.fruit1-button-class {
-  display: flex;
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  text-align: center;
-  justify-content: space-around;
-}
-/*----------SECOND ROW OF FRUIT PICS----------*/
+
+/* 2) Replace huge left/right margins with a centered, flexible container */
+.fruitpics1,
 .fruitpics2 {
-    margin-top: 0; /*Below top rect and first pic row */
-    margin-left: 500px;
-    margin-right: 500px;
-    display: flex;
-    justify-content: space-around; /*even spaceing between edges */
-    align-items: center;
-    padding: 40px;
+  margin: 24px auto 0;                  /* center rows */
+  max-width: 1100px;                    /* keep from stretching too wide on desktops */
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;                      /* allow wrapping on smaller screens */
+  justify-content: center;
+  gap: 24px;                            /* consistent spacing between items */
 }
-/*Format image itself*/
+
+/* 3) Make images scale while keeping a neat square look */
+.fruitpics1 img,
 .fruitpics2 img {
-    width: 200px;
-    height: 200px;
-    border: 2px solid black;
-    border-radius: 8px;
+  width: min(28vw, 200px);              /* cap at 200px, shrink on narrow screens */
+  aspect-ratio: 1/1;                    /* keep square */
+  height: auto;
+  object-fit: cover;
+  border: 2px solid black;
+  border-radius: 8px;
 }
-/*align image inside of figure block*/
+
+/* 4) Tidy figure/button alignment */
+.fruitpics1 figure,
 .fruitpics2 figure {
   text-align: center;
   margin: 0;
 }
-/*Fruit button style*/
-.fruit2-button-class {
-  display: flex;
-  font-size: 24px;
-  font-weight: bold;
+
+a.fruit1-button-class,
+a.fruit2-button-class {
+  display: block;
+  font-size: clamp(16px, 2.5vw, 20px);
+  font-weight: 700;
   color: #333;
-  text-align: center;
-  justify-content: space-around;
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+/* 5) Optional: tighten gaps on very small screens */
+@media (max-width: 600px) {
+  .fruitpics1,
+  .fruitpics2 { gap: 16px; padding: 12px; }
 }
