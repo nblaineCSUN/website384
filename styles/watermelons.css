@@ -1,0 +1,76 @@
+:root { --header-h: clamp(72px, 12vw, 160px); } /* scales with viewport */
+body {
+    margin: 0; 
+    padding-top: calc(var(--header-h) + 16px);  /* push content below header */
+    background-color: #FC6C85; /* Watermelon flesh */
+}
+
+#title {
+  margin: 0;
+  line-height: 1.1;
+  font-size: clamp(28px, 8vw, 72px);    /* scale title instead of fixed 100px */
+}
+
+.top-rect {
+  background-color: #3C7646;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--header-h);              /* responsive header height */
+  display: flex; align-items: center;   /* vertical centering */
+  justify-content: center;              /* horizontal centering */
+  border: 3px solid black;
+  padding: 4px;;
+}
+
+
+.slideshow {
+  position: relative;
+  width: 210px;   /* <- set to your image width */
+  height: 210px;  /* <- set to your image height */
+  overflow: hidden;
+  border: solid purple;
+}
+
+.mySlides img {
+  width: clamp(120px, 12vw, 200px); /* steadier than min(28vw, 200px) */
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.mySlides {
+  position: absolute;
+  inset: 0;
+  left: -100%;
+  opacity: 0;
+  transition: left 0.7s ease-in-out; /* slide animation */
+}
+
+/* Current slide: visible */
+.mySlides.active {
+  left: 0;
+  opacity: 1;
+}
+
+/* Previous slide: slides out to the left */
+.mySlides.prev {
+  left: 100%;
+  opacity: 0;
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/* tighten gaps on very small screens */
+@media (max-width: 820px) {
+  .bottom-rect {
+    grid-template-columns:
+      clamp(110px, 20vw, 220px)
+      minmax(360px, 1fr)
+      clamp(110px, 20vw, 220px);
+    gap: 12px;
+  }
+}
