@@ -1,32 +1,45 @@
 /* 1) Make the fixed header play nicely with all screens */
-:root { --header-h: clamp(72px, 12vw, 160px); } /* scales with viewport */
+:root { --header-h: clamp(250px, 12vw, 160px); } /* scales with viewport */
 
 #title {
   margin: 0;
   line-height: 1.1;
   font-size: clamp(28px, 8vw, 72px);    /* scale title instead of fixed 100px */
   font-weight: bold;
+  text-shadow:
+  -1px -1px 0 white,  /* Top-left */
+   1px -1px 0 white,  /* Top-right */
+  -1px  1px 0 white,  /* Bottom-left */
+   1px  1px 0 white; /* Bottom-right */
 }
 
 body { 
   margin: 0; 
   padding-top: calc(var(--header-h) + 16px);  /* push content below header */
-  background-color: #ECBD8E;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNM65TkQVtNNSb-xrp8LKG3USdwSnE9veWtQ&s');
 } 
 
 .top-rect {
-  background-color: #00aee4;
   position: fixed;
   top: 0; left: 0; right: 0;
-  height: var(--header-h);              /* responsive header height */
-  display: flex; align-items: center;   /* vertical centering */
-  justify-content: center;              /* horizontal centering */
+  height: var(--header-h);
+  /* make the GIF fill the box */
+  background-image: url('https://i.redd.it/nzejkztbkcab1.gif');
+  background-repeat: no-repeat;
+  background-position: center;        
+  background-size: 100% 100%;         
+  /* ensure it's ON TOP of content */
+  z-index: 9999;
+  box-sizing: border-box;
+  background-origin: border-box;
+  display: flex; align-items: center; justify-content: center;
   border: 3px solid black;
-  padding: 4px;;
+  padding: 4px;
 }
 
+
 .bottom-rect {
-  background-color: #ECBD8E;
+  /*background-color: #ECBD8E;*/
   border: 4px solid white;
   padding: 16px;
   margin: 8px;
@@ -43,6 +56,48 @@ body {
 .left-rect  { grid-area: left; }
 .bothpicrows { grid-area: middle; }
 .right-rect { grid-area: right; }
+
+.worldFruit {
+  position: absolute;
+  top: 8%;               /* adjust to sit above the portal */
+  left: 50%;
+  transform: translateX(-50%);
+
+  color: black;
+  text-shadow:
+    -1px -1px 0 white,
+     1px -1px 0 white,
+    -1px  1px 0 white,
+     1px  1px 0 white;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  width: 80%;             /* prevent wrapping off edges */
+  margin: 0;
+  z-index: 3;             /* on top of towel + portal */
+}
+
+.earthpic {
+  position: relative;
+  width: 210px;   /* <- set to your image width */
+  height: 210px;  /* <- set to your image height */
+  overflow: hidden;
+  border: solid gold;
+  margin: 0 auto;
+  display: flex;
+  margin-top: auto 0;
+}
+
+.earthpic img {
+  width: clamp(210px, 12vw, 210px); /* steadier than min(28vw, 200px) */
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  border: 2px solid black;
+  border-radius: 8px;
+  display: flex;
+}
+
 
 
 .fruitofday {
@@ -70,7 +125,7 @@ body {
 }
 
 .mySlidesHome img {
-  width: clamp(120px, 12vw, 200px); /* steadier than min(28vw, 200px) */
+  width: clamp(210px, 12vw, 210px); /* steadier than min(28vw, 200px) */
   aspect-ratio: 1 / 1;
   height: auto;
   object-fit: cover;
@@ -104,6 +159,66 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 300px;
+}
+
+.right-rect {
+  border: 4px solid purple;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  /* remove the old galaxy background */
+  background: none;
+}
+
+.towel {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.towel-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid black;       
+  border-radius: 8px;
+}
+
+.portal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 55%;                /* portal size relative to towel width */
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+
+  background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGthOTR5Z21xcnYyaGc5cjNwMjE5MTVncTg5NTBoZjF2NG9xaWVvdSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/sJvz8Qnfly3BOuotGx/giphy.gif');
+  background-size: cover;     /* keep galaxy proportions */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border: 3px solid rgba(255,255,255,0.8);         /* portal rim */
+  box-shadow:
+    0 0 18px 6px rgba(0, 200, 255, 0.45),
+    inset 0 0 22px rgba(255, 255, 255, 0.35);      /* glow */
+  pointer-events: none;       /* don’t block clicks on the towel */
+  z-index: 2;
+}
+
+.astro {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 35%;   /* size astronaut smaller than portal */
+  height: auto;
+
+  z-index: 2;   /* sits above the portal, below the text */
+  border-radius: 8px; /* optional: soften corners */
 }
 
 .bothpicrows {
