@@ -1,0 +1,10 @@
+:root { --header-h: clamp(72px, 12vw, 160px); } /* scales with viewport */
+
+body {
+    background-image: url('https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3YXVrdHlwcm1yMms1MXd4ejJ4YTVib2t6cTM5a294OXpkZXFueG8wdSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/C3jsA7cCaW8dcsLz6H/giphy.gif');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vh;
+
+}

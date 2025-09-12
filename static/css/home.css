@@ -1,0 +1,286 @@
+/* 1) Make the fixed header play nicely with all screens */
+:root { --header-h: clamp(250px, 12vw, 160px); } /* scales with viewport */
+
+#title {
+  margin: 0;
+  line-height: 1.1;
+  font-size: clamp(28px, 8vw, 72px);    /* scale title instead of fixed 100px */
+  font-weight: bold;
+  text-shadow:
+  -1px -1px 0 white,  /* Top-left */
+   1px -1px 0 white,  /* Top-right */
+  -1px  1px 0 white,  /* Bottom-left */
+   1px  1px 0 white; /* Bottom-right */
+}
+/*--------------------------------------------------------------------------------------------*/
+body { 
+  margin: 0; 
+  padding-top: calc(var(--header-h) + 16px);  /* push content below header */
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNM65TkQVtNNSb-xrp8LKG3USdwSnE9veWtQ&s');
+} 
+/*------------------TOP AND BOTTOM RECTANGLES---------------------------------------------------------------*/
+.top-rect {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--header-h);
+  /* make the GIF fill the box */
+  background-image: url('https://i.redd.it/nzejkztbkcab1.gif');
+  background-repeat: no-repeat;
+  background-position: center;        
+  background-size: 100% 100%;         
+  /* ensure it's ON TOP of content */
+  z-index: 9999;
+  box-sizing: border-box;
+  background-origin: border-box;
+  display: flex; align-items: center; justify-content: center;
+  border: 3px solid black;
+  padding: 4px;
+}
+
+
+.bottom-rect {
+  /*background-color: #ECBD8E;*/
+  border: 4px solid white;
+  padding: 16px;
+  margin: 8px;
+
+  display: grid;
+  grid-template-columns:
+    clamp(140px, 22vw, 320px)
+    minmax(420px, 1fr)
+    clamp(140px, 22vw, 320px);
+  grid-template-areas: "left middle right";  /* NEW */
+  gap: 16px;
+  align-items: stretch;
+}
+
+.left-rect  { grid-area: left; }
+.bothpicrows { grid-area: middle; }
+.right-rect { grid-area: right; }
+/*-------------------RIGHT RECT TOWEL PORTAL-------------------------------------------------------------*/
+.worldFruit {
+  position: absolute;
+  top: 8%;               /* adjust to sit above the portal */
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  text-shadow:
+    -1px -1px 0 white,
+     1px -1px 0 white,
+    -1px  1px 0 white,
+     1px  1px 0 white;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  width: 80%;             /* prevent wrapping off edges */
+  margin: 0;
+  z-index: 3;             /* on top of towel + portal */
+}
+
+.towel {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.towel-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid black;       
+  border-radius: 8px;
+}
+
+.portal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 55%;                /* portal size relative to towel width */
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+
+  background-image: url('https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3aHdnaTcybmh2ZGN3M2ljNHkyNHFnNzIxOWl3ajdlbThocG52ZjNvdiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/mX1bWOEGPIAY1yhmKI/giphy.gif');
+  background-size: cover;     /* keep galaxy proportions */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border: 3px solid rgba(255,255,255,0.8);         /* portal rim */
+  box-shadow:
+    0 0 18px 6px rgba(0, 200, 255, 0.45),
+    inset 0 0 22px rgba(255, 255, 255, 0.35);      /* glow */
+  pointer-events: none;       /* don’t block clicks on the towel */
+  z-index: 2;
+}
+
+.astro {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 35%;   /* size astronaut smaller than portal */
+  height: auto;
+
+  z-index: 2;   /* sits above the portal, below the text */
+  border-radius: 8px; /* soften corners */
+}
+
+/*---------------FRUIT VOTING------------------------------------------------------------*/
+
+.fruitofday {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+#fruitofdaydesc {
+  text-align: center;
+  font-size: 23px;
+  width: 100%;
+  margin-top: 0;
+}
+
+.slideshowHome {
+  position: relative;
+  width: 210px;   
+  height: 210px;  
+  overflow: hidden;
+  border: solid purple;
+  margin: 0 auto;
+}
+
+.mySlidesHome img {
+  width: clamp(210px, 12vw, 210px); 
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.mySlidesHome {
+  position: absolute;
+  inset: 0;
+  left: -100%;
+  opacity: 0;
+  transition: left 0.7s ease-in-out; /* slide animation */
+}
+
+/* Current slide: visible */
+.mySlidesHome.active {
+  left: 0;
+  opacity: 1;
+}
+
+/* Previous slide: slides out to the left */
+.mySlidesHome.prev {
+  left: 100%;
+  opacity: 0;
+}
+/*---------------LEFT AND RIGHT RECTANGLE BOX FORMATTING--------------------------------------------------------------*/
+.left-rect,
+.right-rect {
+  border: 4px solid purple;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+}
+
+.right-rect {
+  border: 4px solid purple;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  /* remove the old galaxy background */
+  background: none;
+}
+
+/*----------MIDDLE FRUIT PICTURE ROWS---------------------------------------------------------------------*/
+
+.bothpicrows {
+  border: 4px solid blue;
+  padding-bottom: 8px;
+  width: 100%;
+  max-width: unset;
+  margin: 0;
+  display: block;
+}
+
+
+/* borders for legibility */
+.fruitpics1 {
+  border: 4px solid red;
+}
+.fruitpics2 {
+  border: 4px solid orange;
+}
+/* Centered, flexible containers for fruit images */
+.fruitpics1,
+.fruitpics2 {
+  margin: 24px auto 0;   /* center rows */
+  max-width: 800px;     /* SIZE OF BOX - keep from stretching too wide on desktops */
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;       /* allow wrapping on smaller screens */
+  justify-content: center;
+  gap: 24px;             /* consistent spacing between items */
+}
+
+/* Make images scale while keeping a neat square look */
+.fruitpics1 img,
+.fruitpics2 img {
+  width: clamp(120px, 12vw, 200px); /* steadier than min(28vw, 200px) */
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: cover;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+/* figure alignment (image and button) */
+.fruitpics1 figure,
+.fruitpics2 figure {
+  text-align: center;
+  margin: 0;
+}
+/* button alignment (button only) */
+a.fruit1-button-class,
+a.fruit2-button-class {
+  display: inline-block;
+  font-size: clamp(16px, 2.5vw, 20px);
+  font-weight: 700;
+  color: #333;
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+/*----------------BELOW MIDDLE ROW----------------------------------------------------------------------------*/
+
+.test {
+  border: solid green;
+  text-align: center;
+  margin: 8px;
+}
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------*/
+/* tighten gaps on very small screens */
+@media (max-width: 820px) {
+  .bottom-rect {
+    grid-template-columns:
+      clamp(110px, 20vw, 220px)
+      minmax(360px, 1fr)
+      clamp(110px, 20vw, 220px);
+    gap: 12px;
+  }
+}

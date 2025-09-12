@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}{{ country.name }} - Fruit Facts{% endblock %}
+{% block body %}
+<div class="top-rect">
+  <p id="title">{{ country.name }}</p>
+</div>
+
+<div class="bottom-rect">
+  <div class="left-rect">
+    <h2 class="fruitofday">Fruit Facts</h2>
+    <ul>
+      {% for f in facts %}
+        <li><strong>{{ f.fruit }}:</strong> {{ f.fact }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="right-rect">
+    {% if country.hero_image %}
+      <img class="towel-img" src="{{ country.hero_image }}" alt="{{ country.name }}">
+    {% endif %}
+    <p class="worldFruit">{{ country.summary }}</p>
+  </div>
+</div>
+{% endblock %}
