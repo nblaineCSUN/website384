@@ -1,3 +1,15 @@
+/* @font-face {
+    font-family: 'WoodenSign'; 
+    src: url('../fonts/driftwood-webfont.woff2') format('woff2'),
+         url('../fonts/driftwood-webfont.woff') format('woff'),
+         url('../fonts/Driftwood.ttf') format('truetype');
+} */
+
+@font-face {
+    font-family: 'WoodenSign'; 
+    src: url('../fonts/MISTV___.TTF') format('truetype');
+}
+
 /* 1) Make the fixed header play nicely with all screens */
 :root { --header-h: clamp(250px, 12vw, 160px); } /* scales with viewport */
 
@@ -17,8 +29,12 @@ body {
   margin: 0; 
   padding-top: calc(var(--header-h) + 16px);  /* push content below header */
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNM65TkQVtNNSb-xrp8LKG3USdwSnE9veWtQ&s');
-  height: 100%;
-  width: 100%;
+  background-repeat: repeat;
+  background-size: 275px 183px;
+  
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 } 
 /*------------------TOP AND BOTTOM RECTANGLES---------------------------------------------------------------*/
 .top-rect {
@@ -191,6 +207,23 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 300px;
+  justify-content: center;
+}
+
+.left-rect {
+
+  justify-content: center;
+}
+
+.lefttree-img {
+  padding-right: 500px;
+  border: 2px red;
+  
+}
+
+.righttree-img {
+  padding-right: 200px;
+  display: flex;
 }
 
 .right-rect {
@@ -198,7 +231,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 300px;
-  /* remove the old galaxy background */
   background: none;
 }
 
@@ -211,6 +243,14 @@ body {
   max-width: unset;
   margin: 0;
   display: block;
+}
+
+.featuredfruit {
+  text-align: center;
+  font-family: 'WoodenSign', sans-serif;
+  font-size: 100px;
+  font-weight: bold;
+  color: #815438;
 }
 
 

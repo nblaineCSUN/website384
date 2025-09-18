@@ -1,62 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Coconut Page</title>
-        <link rel="stylesheet" href="../static/css/coconuts.css" type="text/css">
-    </head>
-<body>
-    <div class="top-rect">
-        <p id="title">Coconuts!</p>
+{% extends "featuretemp.html" %}
+
+{% block title %}Coconuts!{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/coconuts.css') }}" />
+{% endblock %}
+
+{% block body %}
+  <div class="top-rect">
+    <p id="title">Coconuts!</p>
+    <div>
+    <a href="{{ url_for('backhome_page') }}" class="homebutton">HOME PAGE</a>
     </div>
-    
-        <div class="slideshow">
+  </div>
 
-    <div class="mySlides">
-        <img src="../static/images/coconutlist/1.jpg">
-    </div>
 
-    <div class="mySlides">
-        <img src="../static/images/coconutlist/2.jpg">
-    </div>
+  <div class="slideshow">
+    {% for i in range(1, 11) %}
+      <div class="mySlides">
+        <img src="{{ url_for('static', filename='images/coconutlist/' ~ i ~ '.jpg') }}" alt="Coconut {{ i }}">
+      </div>
+    {% endfor %}
+  </div>
 
-    <div class="mySlides">
-        <img src="../static/images/coconutlist/3.jpg">
-    </div>
-
-        <div class="mySlides">
-        <img src="../static/images/coconutlist/4.jpg">
-    </div>
-
-        <div class="mySlides">
-        <img src="../static/images/coconutlist/5.jpg">
-    </div>
-
-    <div class="mySlides">
-        <img src="../static/images/coconutlist/6.jpg">
-    </div>
-
-    <div class="mySlides">
-        <img src="../static/images/coconutlist/7.jpg">
-    </div>
-
-    <div class="mySlides">
-        <img src="../static/images/coconutlist/8.jpg">
-    </div>
-
-    <div class="mySlides">
-        <img src="../static/images/coconutlist/9.jpg">
-    </div>
-
-    <div class="mySlides">
-        <img src="../static/images/coconutlist/10.jpg">
-    </div>
-
-    </div>
-    <br>
-
-    <script src="../scripts/slideshow.js"></script>
-</body>
-
-</html>
+  <script src="{{ url_for('static', filename='scripts/slideshow.js') }}" defer></script>
+{% endblock %}

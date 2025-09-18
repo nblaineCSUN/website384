@@ -1,62 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Grape Page</title>
-        <link rel="stylesheet" href="../static/css/grapes.css" type="text/css">
-    </head>
-<body>
-    <div class="top-rect">
-        <p id="title">Grapes!</p>
+{% extends "featuretemp.html" %}
+
+{% block title %}Grapes!{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/grapes.css') }}" />
+{% endblock %}
+
+{% block body %}
+  <div class="top-rect">
+    <p id="title">Grapes!</p>
+    <div>
+    <a href="{{ url_for('backhome_page') }}" class="homebutton">HOME PAGE</a>
     </div>
+  </div>
 
-            <div class="slideshow">
+  <div class="slideshow">
+    {% for i in range(1, 11) %}
+      <div class="mySlides">
+        <img src="{{ url_for('static', filename='images/grapelist/' ~ i ~ '.jpg') }}" alt="Grape {{ i }}">
+      </div>
+    {% endfor %}
+  </div>
 
-    <div class="mySlides">
-        <img src="../static/images/grapelist/1.jpg">
-    </div>
-
-    <div class="mySlides">
-        <img src="../static/images/grapelist/2.jpg">
-    </div>
-
-    <div class="mySlides">
-        <img src="../static/images/grapelist/3.jpg">
-    </div>
-
-        <div class="mySlides">
-        <img src="../static/images/grapelist/4.jpg">
-    </div>
-
-        <div class="mySlides">
-        <img src="../static/images/grapelist/5.jpg">
-    </div>
-
-    <div class="mySlides">
-        <img src="../static/images/grapelist/6.jpg">
-    </div>
-
-    <div class="mySlides">
-        <img src="../static/images/grapelist/7.jpg">
-    </div>
-
-    <div class="mySlides">
-        <img src="../static/images/grapelist/8.jpg">
-    </div>
-
-    <div class="mySlides">
-        <img src="../static/images/grapelist/9.jpg">
-    </div>
-
-    <div class="mySlides">
-        <img src="../static/images/grapelist/10.jpg">
-    </div>
-
-    </div>
-    <br>
-
-    <script src="../scripts/slideshow.js"></script>
-</body>
-
-</html>
+  <script src="{{ url_for('static', filename='scripts/slideshow.js') }}" defer></script>
+{% endblock %}
