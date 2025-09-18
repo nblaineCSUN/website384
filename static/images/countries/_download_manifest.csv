@@ -1,0 +1,51 @@
+country,saved_as,image_url,status,content_type,tried_titles
+Afghanistan,static/images/countries/afghanistan.jpg,https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg,ok,image/svg+xml,Afghanistan
+Albania,static/images/countries/albania.jpg,https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Albania.svg,ok,image/svg+xml,Albania
+Algeria,,https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Algeria.svg,too_small,,Algeria
+Andorra,static/images/countries/andorra.jpg,https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Andorra.svg,ok,image/svg+xml,Andorra
+Angola,static/images/countries/angola.jpg,https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Angola.svg,ok,image/svg+xml,Angola
+Antigua and Barbuda,,https://upload.wikimedia.org/wikipedia/commons/8/89/Flag_of_Antigua_and_Barbuda.svg,too_small,,Antigua and Barbuda
+Argentina,static/images/countries/argentina.jpg,https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg,ok,image/svg+xml,Argentina
+Armenia,,https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Armenia.svg,too_small,,Armenia
+Australia,static/images/countries/australia.jpg,https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Australia_%28converted%29.svg,ok,image/svg+xml,Australia
+Austria,,https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_Austria.svg,too_small,,Austria
+Azerbaijan,,https://upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Azerbaijan.svg,too_small,,Azerbaijan
+Bahamas,,,not_found,,Bahamas
+Bahrain,,https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Bahrain.svg,too_small,,Bahrain
+Bangladesh,,https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg,too_small,,Bangladesh
+Barbados,,https://upload.wikimedia.org/wikipedia/commons/e/ef/Flag_of_Barbados.svg,too_small,,Barbados
+Belarus,static/images/countries/belarus.jpg,https://upload.wikimedia.org/wikipedia/commons/8/85/Flag_of_Belarus.svg,ok,image/svg+xml,Belarus
+Belgium,,https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg,too_small,,Belgium
+Belize,static/images/countries/belize.jpg,https://upload.wikimedia.org/wikipedia/commons/e/e7/Flag_of_Belize.svg,ok,image/svg+xml,Belize
+Benin,,https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Benin.svg,too_small,,Benin
+Bhutan,static/images/countries/bhutan.jpg,https://upload.wikimedia.org/wikipedia/commons/9/91/Flag_of_Bhutan.svg,ok,image/svg+xml,Bhutan
+Bolivia,static/images/countries/bolivia.jpg,https://upload.wikimedia.org/wikipedia/commons/d/de/Flag_of_Bolivia_%28state%29.svg,ok,image/svg+xml,Bolivia
+Bosnia and Herzegovina,,https://upload.wikimedia.org/wikipedia/commons/b/bf/Flag_of_Bosnia_and_Herzegovina.svg,too_small,,Bosnia and Herzegovina
+Botswana,,https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_Botswana.svg,too_small,,Botswana
+Brazil,static/images/countries/brazil.jpg,https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg,ok,image/svg+xml,Brazil
+Brunei,static/images/countries/brunei.jpg,https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Brunei.svg,ok,image/svg+xml,Brunei
+Bulgaria,,https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Bulgaria.svg,too_small,,Bulgaria
+Burkina Faso,,https://upload.wikimedia.org/wikipedia/commons/3/31/Flag_of_Burkina_Faso.svg,too_small,,Burkina Faso
+Burundi,,https://upload.wikimedia.org/wikipedia/commons/5/50/Flag_of_Burundi.svg,too_small,,Burundi
+Cabo Verde,static/images/countries/cabo-verde.jpg,https://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Cape_Verde.svg,ok,image/svg+xml,Cabo Verde | Cape Verde
+Cambodia,static/images/countries/cambodia.jpg,https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_Cambodia.svg,ok,image/svg+xml,Cambodia
+Cameroon,,https://upload.wikimedia.org/wikipedia/commons/4/4f/Flag_of_Cameroon.svg,too_small,,Cameroon
+Canada,,https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg,too_small,,Canada
+Central African Republic,,https://upload.wikimedia.org/wikipedia/commons/6/6f/Flag_of_the_Central_African_Republic.svg,too_small,,Central African Republic
+Chad,,https://upload.wikimedia.org/wikipedia/commons/4/4b/Flag_of_Chad.svg,too_small,,Chad
+Chile,,https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg,too_small,,Chile
+China,,https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg,too_small,,China
+Colombia,,https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg,too_small,,Colombia
+Comoros,,https://upload.wikimedia.org/wikipedia/commons/9/94/Flag_of_the_Comoros.svg,too_small,,Comoros
+Congo,static/images/countries/congo.jpg,https://upload.wikimedia.org/wikipedia/commons/3/3b/Disambiguator_map_for_countries_named_Congo.svg,ok,image/svg+xml,Republic of the Congo | Congo
+Costa Rica,,https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg,too_small,,Costa Rica
+Côte d’Ivoire,,,not_found,,Côte d'Ivoire | Côte d’Ivoire
+Croatia,static/images/countries/croatia.jpg,https://upload.wikimedia.org/wikipedia/commons/1/1b/Flag_of_Croatia.svg,ok,image/svg+xml,Croatia
+Cuba,,https://upload.wikimedia.org/wikipedia/commons/b/bd/Flag_of_Cuba.svg,too_small,,Cuba
+Cyprus,static/images/countries/cyprus.jpg,https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Cyprus.svg,ok,image/svg+xml,Cyprus
+Czechia,,https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_Czech_Republic.svg,too_small,,Czechia | Czech Republic
+Democratic Republic of the Congo,,https://upload.wikimedia.org/wikipedia/commons/6/6f/Flag_of_the_Democratic_Republic_of_the_Congo.svg,too_small,,Democratic Republic of the Congo
+Denmark,,https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Denmark.svg,too_small,,Denmark
+Djibouti,,https://upload.wikimedia.org/wikipedia/commons/3/34/Flag_of_Djibouti.svg,too_small,,Djibouti
+Dominica,static/images/countries/dominica.jpg,https://upload.wikimedia.org/wikipedia/commons/c/c4/Flag_of_Dominica.svg,ok,image/svg+xml,Dominica (country) | Dominica
+Dominican Republic,static/images/countries/dominican-republic.jpg,https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_the_Dominican_Republic.svg,ok,image/svg+xml,Dominican Republic

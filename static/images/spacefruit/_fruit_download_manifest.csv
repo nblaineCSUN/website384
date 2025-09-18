@@ -1,0 +1,101 @@
+country,fruit,saved_as,image_url,status,content_type,tried_titles
+Afghanistan,Pomegranate,static/images/spacefruit/afghanistan-pomegranate.jpg,https://upload.wikimedia.org/wikipedia/commons/6/6a/Pomegranate_Juice_%282019%29.jpg,db_update_error:OperationalError,image/jpeg,Pomegranate
+Afghanistan,Pomegranate,,,db_update_error:OperationalError,,Pomegranate
+Albania,Olive,static/images/spacefruit/albania-olive.jpg,https://upload.wikimedia.org/wikipedia/commons/8/84/Olivesfromjordan.jpg,db_update_error:OperationalError,image/jpeg,Olive
+Albania,Olive,,,db_update_error:OperationalError,,Olive
+Algeria,Date,static/images/spacefruit/algeria-date.jpg,https://upload.wikimedia.org/wikipedia/commons/4/45/Dates005.jpg,db_update_error:OperationalError,image/jpeg,Date (fruit) | Date palm
+Algeria,Date,,,db_update_error:OperationalError,,Date (fruit) | Date palm
+Andorra,Apple,static/images/spacefruit/andorra-apple.jpg,https://upload.wikimedia.org/wikipedia/commons/a/a6/Pink_lady_and_cross_section.jpg,db_update_error:OperationalError,image/jpeg,Apple
+Andorra,Apple,,,db_update_error:OperationalError,,Apple
+Angola,Banana,static/images/spacefruit/angola-banana.jpg,https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg,db_update_error:OperationalError,image/jpeg,Banana
+Angola,Banana,,,db_update_error:OperationalError,,Banana
+Antigua and Barbuda,Mango,static/images/spacefruit/antigua-and-barbuda-mango.jpg,https://upload.wikimedia.org/wikipedia/commons/7/74/Mangos_-_single_and_halved.jpg,db_update_error:OperationalError,image/jpeg,Mango
+Antigua and Barbuda,Mango,,,db_update_error:OperationalError,,Mango
+Argentina,Lemon,static/images/spacefruit/argentina-lemon.jpg,https://upload.wikimedia.org/wikipedia/commons/e/e4/P1030323.JPG,db_update_error:OperationalError,image/jpeg,Lemon (fruit) | Lemon (plant) | Lemon
+Argentina,Lemon,,,db_update_error:OperationalError,,Lemon (fruit) | Lemon (plant) | Lemon
+Armenia,Apricot,static/images/spacefruit/armenia-apricot.jpg,https://upload.wikimedia.org/wikipedia/commons/2/2a/Apricot_and_cross_section.jpg,db_update_error:OperationalError,image/jpeg,Apricot (fruit) | Apricot (plant) | Apricot
+Armenia,Apricot,,,db_update_error:OperationalError,,Apricot (fruit) | Apricot (plant) | Apricot
+Australia,Finger Lime,static/images/spacefruit/australia-finger-lime.jpg,https://upload.wikimedia.org/wikipedia/commons/c/c5/Finger_lime_with_juice_vesicles_and_seeds_partially_extracted.jpg,db_update_error:OperationalError,image/jpeg,Finger lime | Citrus australasica
+Australia,Finger Lime,,,db_update_error:OperationalError,,Finger lime | Citrus australasica
+Austria,Apple,static/images/spacefruit/austria-apple.jpg,https://upload.wikimedia.org/wikipedia/commons/a/a6/Pink_lady_and_cross_section.jpg,db_update_error:OperationalError,image/jpeg,Apple
+Austria,Apple,,,db_update_error:OperationalError,,Apple
+Azerbaijan,Pomegranate,static/images/spacefruit/azerbaijan-pomegranate.jpg,https://upload.wikimedia.org/wikipedia/commons/6/6a/Pomegranate_Juice_%282019%29.jpg,db_update_error:OperationalError,image/jpeg,Pomegranate
+Azerbaijan,Pomegranate,,,db_update_error:OperationalError,,Pomegranate
+Bahamas,Pineapple,static/images/spacefruit/bahamas-pineapple.jpg,https://upload.wikimedia.org/wikipedia/commons/7/74/%E0%B4%95%E0%B5%88%E0%B4%A4%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%95%E0%B5%8D%E0%B4%95.jpg,db_update_error:OperationalError,image/jpeg,Pineapple
+Bahamas,Pineapple,,,db_update_error:OperationalError,,Pineapple
+Bahrain,Date,static/images/spacefruit/bahrain-date.jpg,https://upload.wikimedia.org/wikipedia/commons/4/45/Dates005.jpg,db_update_error:OperationalError,image/jpeg,Date (fruit) | Date palm
+Bahrain,Date,,,db_update_error:OperationalError,,Date (fruit) | Date palm
+Bangladesh,Jackfruit,static/images/spacefruit/bangladesh-jackfruit.jpg,https://upload.wikimedia.org/wikipedia/commons/b/ba/Jackfruit_hanging.JPG,db_update_error:OperationalError,image/jpeg,Jackfruit
+Bangladesh,Jackfruit,,,db_update_error:OperationalError,,Jackfruit
+Barbados,Breadfruit,static/images/spacefruit/barbados-breadfruit.jpg,https://upload.wikimedia.org/wikipedia/commons/5/57/Artocarpus_altilis_%28fruit%29.jpg,db_update_error:OperationalError,image/jpeg,Breadfruit
+Barbados,Breadfruit,,,db_update_error:OperationalError,,Breadfruit
+Belarus,Apple,static/images/spacefruit/belarus-apple.jpg,https://upload.wikimedia.org/wikipedia/commons/a/a6/Pink_lady_and_cross_section.jpg,db_update_error:OperationalError,image/jpeg,Apple
+Belarus,Apple,,,db_update_error:OperationalError,,Apple
+Belgium,Strawberry,static/images/spacefruit/belgium-strawberry.jpg,https://upload.wikimedia.org/wikipedia/commons/4/4c/Garden_strawberry_%28Fragaria_%C3%97_ananassa%29_single2.jpg,db_update_error:OperationalError,image/jpeg,Strawberry
+Belgium,Strawberry,,,db_update_error:OperationalError,,Strawberry
+Belize,Banana,static/images/spacefruit/belize-banana.jpg,https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg,db_update_error:OperationalError,image/jpeg,Banana
+Belize,Banana,,,db_update_error:OperationalError,,Banana
+Benin,Pineapple,static/images/spacefruit/benin-pineapple.jpg,https://upload.wikimedia.org/wikipedia/commons/7/74/%E0%B4%95%E0%B5%88%E0%B4%A4%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%95%E0%B5%8D%E0%B4%95.jpg,db_update_error:OperationalError,image/jpeg,Pineapple
+Benin,Pineapple,,,db_update_error:OperationalError,,Pineapple
+Bhutan,Apple,static/images/spacefruit/bhutan-apple.jpg,https://upload.wikimedia.org/wikipedia/commons/a/a6/Pink_lady_and_cross_section.jpg,db_update_error:OperationalError,image/jpeg,Apple
+Bhutan,Apple,,,db_update_error:OperationalError,,Apple
+Bolivia,Papaya,static/images/spacefruit/bolivia-papaya.jpg,https://upload.wikimedia.org/wikipedia/commons/8/84/Carica_papaya_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-029.jpg,db_update_error:OperationalError,image/jpeg,Papaya
+Bolivia,Papaya,,,db_update_error:OperationalError,,Papaya
+Bosnia and Herzegovina,Plum,static/images/spacefruit/bosnia-and-herzegovina-plum.jpg,https://upload.wikimedia.org/wikipedia/commons/e/ec/Plums_African_Rose_-_whole%2C_halved_and_slice.jpg,db_update_error:OperationalError,image/jpeg,Plum
+Bosnia and Herzegovina,Plum,,,db_update_error:OperationalError,,Plum
+Botswana,Melon,static/images/spacefruit/botswana-melon.jpg,https://upload.wikimedia.org/wikipedia/commons/e/e7/Cantaloupe_and_canary_melon.jpg,db_update_error:OperationalError,image/jpeg,Melon
+Botswana,Melon,,,db_update_error:OperationalError,,Melon
+Brazil,Açaí,static/images/spacefruit/brazil-acai.jpg,https://upload.wikimedia.org/wikipedia/commons/e/e4/Euterpe_oleracea_salu.jpg,db_update_error:OperationalError,image/jpeg,Açaí palm
+Brazil,Açaí,,,db_update_error:OperationalError,,Açaí palm
+Brunei,Durian,static/images/spacefruit/brunei-durian.jpg,https://upload.wikimedia.org/wikipedia/commons/b/bc/Durian_in_black.jpg,db_update_error:OperationalError,image/jpeg,Durian
+Brunei,Durian,,,db_update_error:OperationalError,,Durian
+Bulgaria,Cherry,static/images/spacefruit/bulgaria-cherry.jpg,https://upload.wikimedia.org/wikipedia/commons/f/f6/Cherry_season_%2848216568227%29.jpg,db_update_error:OperationalError,image/jpeg,Cherry
+Bulgaria,Cherry,,,db_update_error:OperationalError,,Cherry
+Burkina Faso,Mango,static/images/spacefruit/burkina-faso-mango.jpg,https://upload.wikimedia.org/wikipedia/commons/7/74/Mangos_-_single_and_halved.jpg,db_update_error:OperationalError,image/jpeg,Mango
+Burkina Faso,Mango,,,db_update_error:OperationalError,,Mango
+Burundi,Banana,static/images/spacefruit/burundi-banana.jpg,https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg,db_update_error:OperationalError,image/jpeg,Banana
+Burundi,Banana,,,db_update_error:OperationalError,,Banana
+Cabo Verde,Papaya,static/images/spacefruit/cabo-verde-papaya.jpg,https://upload.wikimedia.org/wikipedia/commons/8/84/Carica_papaya_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-029.jpg,db_update_error:OperationalError,image/jpeg,Papaya
+Cabo Verde,Papaya,,,db_update_error:OperationalError,,Papaya
+Cambodia,Mango,static/images/spacefruit/cambodia-mango.jpg,https://upload.wikimedia.org/wikipedia/commons/7/74/Mangos_-_single_and_halved.jpg,db_update_error:OperationalError,image/jpeg,Mango
+Cambodia,Mango,,,db_update_error:OperationalError,,Mango
+Cameroon,Plantain,static/images/spacefruit/cameroon-plantain.jpg,https://upload.wikimedia.org/wikipedia/commons/8/86/Mega_racimos_de_guineos.jpg,db_update_error:OperationalError,image/jpeg,Cooking banana
+Cameroon,Plantain,,,db_update_error:OperationalError,,Cooking banana
+Canada,Blueberry,static/images/spacefruit/canada-blueberry.jpg,https://upload.wikimedia.org/wikipedia/commons/1/15/Blueberries.jpg,db_update_error:OperationalError,image/jpeg,Blueberry
+Canada,Blueberry,,,db_update_error:OperationalError,,Blueberry
+Central African Republic,Banana,static/images/spacefruit/central-african-republic-banana.jpg,https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg,db_update_error:OperationalError,image/jpeg,Banana
+Central African Republic,Banana,,,db_update_error:OperationalError,,Banana
+Chad,Date,static/images/spacefruit/chad-date.jpg,https://upload.wikimedia.org/wikipedia/commons/4/45/Dates005.jpg,db_update_error:OperationalError,image/jpeg,Date (fruit) | Date palm
+Chad,Date,,,db_update_error:OperationalError,,Date (fruit) | Date palm
+Chile,Cherry,static/images/spacefruit/chile-cherry.jpg,https://upload.wikimedia.org/wikipedia/commons/f/f6/Cherry_season_%2848216568227%29.jpg,db_update_error:OperationalError,image/jpeg,Cherry
+Chile,Cherry,,,db_update_error:OperationalError,,Cherry
+China,Lychee,static/images/spacefruit/china-lychee.jpg,https://upload.wikimedia.org/wikipedia/commons/4/46/Litchi_chinensis_fruits.JPG,db_update_error:OperationalError,image/jpeg,Lychee
+China,Lychee,,,db_update_error:OperationalError,,Lychee
+Colombia,Guava,static/images/spacefruit/colombia-guava.jpg,https://upload.wikimedia.org/wikipedia/commons/8/88/Guava_pink_fruit.jpg,db_update_error:OperationalError,image/jpeg,Guava
+Colombia,Guava,,,db_update_error:OperationalError,,Guava
+Comoros,Coconut,static/images/spacefruit/comoros-coconut.jpg,https://upload.wikimedia.org/wikipedia/commons/3/32/Cocos_nucifera_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-187.jpg,db_update_error:OperationalError,image/jpeg,Coconut
+Comoros,Coconut,,,db_update_error:OperationalError,,Coconut
+Congo,Mango,static/images/spacefruit/congo-mango.jpg,https://upload.wikimedia.org/wikipedia/commons/7/74/Mangos_-_single_and_halved.jpg,db_update_error:OperationalError,image/jpeg,Mango
+Congo,Mango,,,db_update_error:OperationalError,,Mango
+Costa Rica,Pineapple,static/images/spacefruit/costa-rica-pineapple.jpg,https://upload.wikimedia.org/wikipedia/commons/7/74/%E0%B4%95%E0%B5%88%E0%B4%A4%E0%B4%9A%E0%B5%8D%E0%B4%9A%E0%B4%95%E0%B5%8D%E0%B4%95.jpg,db_update_error:OperationalError,image/jpeg,Pineapple
+Costa Rica,Pineapple,,,db_update_error:OperationalError,,Pineapple
+Croatia,Fig,static/images/spacefruit/croatia-fig.jpg,https://upload.wikimedia.org/wikipedia/commons/2/2e/Ficus_carica_L%2C_1771.jpg,db_update_error:OperationalError,image/jpeg,Common fig | Ficus carica | Fig (fruit) | Fig (plant) | Fig
+Croatia,Fig,,,db_update_error:OperationalError,,Common fig | Ficus carica | Fig (fruit) | Fig (plant) | Fig
+Cuba,Guava,static/images/spacefruit/cuba-guava.jpg,https://upload.wikimedia.org/wikipedia/commons/8/88/Guava_pink_fruit.jpg,db_update_error:OperationalError,image/jpeg,Guava
+Cuba,Guava,,,db_update_error:OperationalError,,Guava
+Cyprus,Orange,static/images/spacefruit/cyprus-orange.jpg,https://upload.wikimedia.org/wikipedia/commons/e/e3/Oranges_-_whole-halved-segment.jpg,db_update_error:OperationalError,image/jpeg,Orange (fruit)
+Cyprus,Orange,,,db_update_error:OperationalError,,Orange (fruit)
+Czechia,Apple,static/images/spacefruit/czechia-apple.jpg,https://upload.wikimedia.org/wikipedia/commons/a/a6/Pink_lady_and_cross_section.jpg,db_update_error:OperationalError,image/jpeg,Apple
+Czechia,Apple,,,db_update_error:OperationalError,,Apple
+Côte d’Ivoire,Cocoa Pod,static/images/spacefruit/cote-divoire-cocoa-pod.jpg,https://upload.wikimedia.org/wikipedia/commons/5/5a/Matadecacao.jpg,db_update_error:OperationalError,image/jpeg,Theobroma cacao
+Côte d’Ivoire,Cocoa Pod,,,db_update_error:OperationalError,,Theobroma cacao
+Democratic Republic of the Congo,Banana,static/images/spacefruit/democratic-republic-of-the-congo-banana.jpg,https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg,db_update_error:OperationalError,image/jpeg,Banana
+Democratic Republic of the Congo,Banana,,,db_update_error:OperationalError,,Banana
+Denmark,Apple,static/images/spacefruit/denmark-apple.jpg,https://upload.wikimedia.org/wikipedia/commons/a/a6/Pink_lady_and_cross_section.jpg,db_update_error:OperationalError,image/jpeg,Apple
+Denmark,Apple,,,db_update_error:OperationalError,,Apple
+Djibouti,Date,static/images/spacefruit/djibouti-date.jpg,https://upload.wikimedia.org/wikipedia/commons/4/45/Dates005.jpg,db_update_error:OperationalError,image/jpeg,Date (fruit) | Date palm
+Djibouti,Date,,,db_update_error:OperationalError,,Date (fruit) | Date palm
+Dominica,Banana,static/images/spacefruit/dominica-banana.jpg,https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg,db_update_error:OperationalError,image/jpeg,Banana
+Dominica,Banana,,,db_update_error:OperationalError,,Banana
+Dominican Republic,Plantain,static/images/spacefruit/dominican-republic-plantain.jpg,https://upload.wikimedia.org/wikipedia/commons/8/86/Mega_racimos_de_guineos.jpg,db_update_error:OperationalError,image/jpeg,Cooking banana
+Dominican Republic,Plantain,,,db_update_error:OperationalError,,Cooking banana

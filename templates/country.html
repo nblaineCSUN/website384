@@ -1,25 +1,49 @@
-{% extends "base.html" %}
+{% extends "landingbackground.html" %}
 {% block title %}{{ country.name }} - Fruit Facts{% endblock %}
 {% block body %}
-<div class="top-rect">
-  <p id="title">{{ country.name }}</p>
-</div>
-
-<div class="bottom-rect">
-  <div class="left-rect">
-    <h2 class="fruitofday">Fruit Facts</h2>
-    <ul>
-      {% for f in facts %}
-        <li><strong>{{ f.fruit }}:</strong> {{ f.fact }}</li>
-      {% endfor %}
-    </ul>
+<div class="wholething">
+  <!--<img src="../static/images/beachbar.jpg" class="landingbackground"> -->
+  <div class="top-rect">
+    
+    <p id="title">{{ country.name }}</p>
+    <a href="{{ url_for('space_page') }}">🔀 Show Another Random Country</a>
   </div>
 
-  <div class="right-rect">
-    {% if country.hero_image %}
-      <img class="towel-img" src="{{ country.hero_image }}" alt="{{ country.name }}">
-    {% endif %}
-    <p class="worldFruit">{{ country.summary }}</p>
+  <div class="bottom-rect">
+    <div class="left-rect">
+      <h2 class="fruitofday">Fruit Facts</h2>
+      <ul>
+        {% for f in facts %}
+          <li>
+            <strong>{{ f.fruit }}:</strong> {{ f.fact }}
+            {% if f.fruit_image %}
+              {% set fimg = f.fruit_image|replace('\\','/') %}
+              {% if '://' in fimg %}
+                <img src="{{ fimg }}" alt="{{ f.fruit }}" class="newimg">
+              {% else %}
+                {# Strip leading "static/" if present, then serve via url_for #}
+                {% set ffile = fimg.startswith('static/') and fimg[7:] or fimg %}
+                <img src="{{ url_for('static', filename=ffile) }}" alt="{{ f.fruit }}">
+              {% endif %}
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="right-rect">
+      {% if country.hero_image %}
+        {% set img = country.hero_image|replace('\\','/') %}
+        {% if '://' in img %}
+          <img class="towel-img" src="{{ img }}" alt="{{ country.name }}">
+        {% else %}
+          {# If DB stored "static/images/...", drop the leading "static/" #}
+          {% set file = img.startswith('static/') and img[7:] or img %}
+          <img class="towel-img" src="{{ url_for('static', filename=file) }}" alt="{{ country.name }}">
+        {% endif %}
+      {% endif %}
+      <p class="worldFruit">{{ country.summary }}</p>
+    </div>
   </div>
 </div>
 {% endblock %}

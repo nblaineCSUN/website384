@@ -40,10 +40,13 @@ def random_page():
     )
     return render_template("country.html", country=country, facts=facts)
 
-app.route("/voyager")
-def randomizer():
+@app.route("/voyager")
+def space_page():
     return render_template("space.html")
 
+@app.route("/backhome")
+def backhome_page():
+    return render_template("backhome.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

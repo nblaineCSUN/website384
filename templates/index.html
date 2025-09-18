@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Website384</title>
-        <link rel="stylesheet" href="../static/css/home.css" type="text/css">
-    </head>
+{% extends "base.html" %}
+{% block title %}Test Home{% endblock %}
+{% block body %}
 
     <body>
 
@@ -59,7 +54,7 @@
                     <img class="towel-img" src="../static/images/beachtowel.jpg" alt="towel">
                     <div class="portal"></div>
                     <p class="worldFruit">Explore The Mysteries Of Fruit!</p>
-                    <a href="../pages/space.html" class="fruit1-button-class"><img class="astro" src="../static/images/astro.jpg" alt="astro"></a>
+                    <a href="{{ url_for('space_page') }}" class="fruit1-button-class"><img class="astro" src="../static/images/astro.jpg" alt="astro"></a>
                 </div>
             </div>
             
@@ -118,7 +113,19 @@
             TEXT
         </p>
     </div>
-    <script src="../scripts/fruitvotehome.js" defer></script>
+    
+    <script>
+        const slides = document.querySelectorAll('.mySlidesHome');
+        if (slides.length > 0) {
+        // Pick a random slide
+        const current = Math.floor(Math.random() * slides.length);
+        
+        // Show it
+        slides[current].classList.add("active");
+        }
+
+    </script>
     </body>
 
-</html>  
+{% endblock %}
+ 
