@@ -23,8 +23,7 @@ def db_query_all(query, params=()):
 
 @app.route("/")
 def home():
-    # Render your homepage (adapt your existing index.html into this template)
-    # You can also pass a small list of featured countries if you want
+    # Render homepage
     countries = db_query_all("SELECT slug, name FROM countries ORDER BY name")
     return render_template("index.html", countries=countries)
 
@@ -40,13 +39,40 @@ def random_page():
     )
     return render_template("country.html", country=country, facts=facts)
 
+#PORTAL
 @app.route("/voyager")
 def space_page():
     return render_template("space.html")
 
+#HOME BUTTON
 @app.route("/backhome")
 def backhome_page():
     return render_template("backhome.html")
+
+#FEATURED FRUIT
+@app.route("/coconuts")
+def coconuts_page():
+    return render_template("featuredfruit/coconuts.html")
+
+@app.route("/bananas")
+def bananas_page():
+    return render_template("featuredfruit/bananas.html")
+
+@app.route("/pineapples")
+def pineapples_page():
+    return render_template("featuredfruit/pineapples.html")
+
+@app.route("/strawberries")
+def strawberries_page():
+    return render_template("featuredfruit/strawberries.html")
+
+@app.route("/grapes")
+def grapes_page():
+    return render_template("featuredfruit/grapes.html")
+
+@app.route("/watermelons")
+def watermelons_page():
+    return render_template("featuredfruit/watermelons.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

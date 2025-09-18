@@ -17,6 +17,8 @@ body {
   margin: 0; 
   padding-top: calc(var(--header-h) + 16px);  /* push content below header */
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNM65TkQVtNNSb-xrp8LKG3USdwSnE9veWtQ&s');
+  height: 100%;
+  width: 100%;
 } 
 /*------------------TOP AND BOTTOM RECTANGLES---------------------------------------------------------------*/
 .top-rect {
