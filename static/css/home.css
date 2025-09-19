@@ -13,6 +13,12 @@
 /* 1) Make the fixed header play nicely with all screens */
 :root { --header-h: clamp(250px, 12vw, 160px); } /* scales with viewport */
 
+#currentTime {
+  top: 0;
+  right: 0;
+  position: absolute;
+  font-weight: bold;
+}
 #title {
   margin: 0;
   line-height: 1.1;
@@ -30,8 +36,8 @@ body {
   padding-top: calc(var(--header-h) + 16px);  /* push content below header */
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNM65TkQVtNNSb-xrp8LKG3USdwSnE9veWtQ&s');
   background-repeat: repeat;
-  background-size: 275px 183px;
-  
+  background-size: cover;
+  position: relative;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -137,9 +143,10 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotateY(180deg);
+  
 
-  width: 35%;   /* size astronaut smaller than portal */
+  width: 45%;   /* size astronaut smaller than portal */
   height: auto;
 
   z-index: 2;   /* sits above the portal, below the text */
@@ -150,10 +157,15 @@ body {
 
 .fruitofday {
   text-align: center;
+  font-family: 'WoodenSign', sans-serif;
   font-size: 35px;
   font-weight: bold;
-  width: 100%;
+  width: 50%;
   margin-bottom: 4px;
+  top: -475px;
+  right: -50px;
+  position: relative;
+  z-index: 11;
 }
 
 #fruitofdaydesc {
@@ -170,6 +182,7 @@ body {
   overflow: hidden;
   border: solid purple;
   margin: 0 auto;
+  top: -300px;
 }
 
 .mySlidesHome img {
@@ -215,9 +228,21 @@ body {
   justify-content: center;
 }
 
+.lefttree {
+  position: relative;
+}
+
+.leftfloorsign {
+  position: relative;
+  top: -250px;
+  left: -60px;
+  z-index: 10;
+  width: 120%;
+  transform: rotateY(180deg);
+}
+
 .lefttree-img {
   padding-right: 500px;
-  border: 2px red;
   
 }
 
@@ -243,7 +268,10 @@ body {
   max-width: unset;
   margin: 0;
   display: block;
+  position: relative;
+  z-index: 5;
 }
+
 
 .featuredfruit {
   text-align: center;
@@ -257,7 +285,14 @@ body {
 /* borders for legibility */
 .fruitpics1 {
   border: 4px solid red;
+  position: relative; /* allows stacking */  
 }
+
+.woodtable {
+  z-index: 1;
+
+}
+
 .fruitpics2 {
   border: 4px solid orange;
 }
@@ -271,6 +306,7 @@ body {
   flex-wrap: wrap;       /* allow wrapping on smaller screens */
   justify-content: center;
   gap: 24px;             /* consistent spacing between items */
+  position: relative;
 }
 
 /* Make images scale while keeping a neat square look */

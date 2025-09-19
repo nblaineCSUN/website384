@@ -7,6 +7,23 @@
 
         <div class="top-rect">
             <p id="title">Fruit Stand</p>
+            <div id="currentTime"></div>
+              <script>
+                const _DateAndTime = () => {
+                document.querySelector("#currentTime").innerHTML = new Date().toLocaleDateString('en-gb', 
+                {
+                year: 'numeric', 
+                month: 'short', 
+                day: 'numeric', 
+                hour: 'numeric', 
+                minute: 'numeric', 
+                hour12: true
+            });
+            }
+
+            setInterval(_DateAndTime, 1000);
+            _DateAndTime();
+            </script>
         </div>
 
 
@@ -17,8 +34,11 @@
                     <div class="lefttree">
                         <img class="lefttree-img" src="../static/images/homepage/leftpalm.png" alt="lefttree">
                     </div>
-                <p class="fruitofday">New Fruits in Stock!</p>
-                <p id="fruitofdaydesc">Vote On A New Fruit!</p>      
+                    <div class="leftfloorsigndiv">
+                        <img class="leftfloorsign" src="../static/images/homepage/floorwoodsign.png" alt="sign">
+                        <p class="fruitofday">New Fruits!</p>
+                    </div>
+                     
                 <div class="slideshowHome">
 
                     <div class="mySlidesHome">
@@ -62,14 +82,16 @@
                     <img class="towel-img" src="../static/images/beachtowel.jpg" alt="towel">
                     <div class="portal"></div>
                     <p class="worldFruit">Explore The Mysteries Of Fruit!</p>
-                    <a href="{{ url_for('space_page') }}" class="fruit1-button-class"><img class="astro" src="../static/images/astro.jpg" alt="astro"></a>
+                    <a href="{{ url_for('space_page') }}" class="fruit1-button-class"><img class="astro" src="../static/images/astro.png" alt="astro"></a>
                 </div>
                 </div>
             </div>
             
             <div class="bothpicrows">
                 <h1 class="featuredfruit">Featured Fruit</h1>
+                <img class="woodtable" src="../static/images/homepage/woodtable.png" alt="table">
                 <div class="fruitpics1"> 
+                    
                     <a href="{{ url_for('coconuts_page') }}" class="fruit1-button-class">
                         <figure>
                             <img src="../static/images/coconuts.jpg" alt="Picture 1">
