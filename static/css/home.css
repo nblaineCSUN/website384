@@ -282,15 +282,97 @@ body {
 }
 
 
+
+
 /* borders for legibility */
 .fruitpics1 {
   border: 4px solid red;
   position: relative; /* allows stacking */  
 }
 
-.woodtable {
-  z-index: 1;
+.fruitontable.grapes {
+  transform: translateX(-50%) rotate(90deg);
+  max-width: 62%;   /* slightly narrower after rotation */
+  bottom: 20%;
+  transform-origin: center center;
+}
 
+.fruitpics1 figure > img.woodtable.pineapple,
+.fruitpics1 figure > img.fruitontable.pineapple {
+  aspect-ratio: auto;
+  width: auto;
+  max-width: 60%;
+  max-height: none;
+  border-radius: 0;
+  margin-bottom: 50px;
+}  
+
+.fruitpics2 .fruitontable.grapes,
+.fruitpics1 .fruitontable.grapes {
+  transform: translateX(-50%) rotate(90deg) !important;
+  transform-origin: center center;
+  max-width: 560;
+  bottom: 20%;
+}
+
+.fruitontable.pineapple {
+  aspect-ratio: auto;
+  width: 100%;
+  border-radius: 0;
+
+  max-height: 100%;       /* was 56% — bump it bigger */
+  bottom: 10%;           /* lower it so it sits on the table */
+  transform: translateX(-50%);
+}
+
+.fruitpics1 .fruitontable.pineapple,
+.fruitpics2 .fruitontable.pineapple {
+  max-height: 60%;  /* force back a constraint */
+  bottom: 12%;
+  transform: translateX(-50%);  /* keep centering */
+}
+
+.fruitontable.strawberries {
+  max-width: 50%;
+  margin-bottom: 22px;
+}
+
+.fruitontable.bananas {
+  max-width: 47%;
+  margin-bottom: 29px;
+}
+
+.fruitontable.coconuts {
+  max-width: 50%;
+  margin-bottom: 18px;
+}
+
+.fruitontable.watermelons{ 
+  margin-bottom: 10px;
+}
+
+.woodtable {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;     /* match card width */
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.fruitontable {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translateX(-50%);   /* keep this; per-fruit transforms must include it */
+  max-width: 70%;
+  max-height: 70%;
+  width: auto;
+  height: auto;
+  z-index: 2;
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,.25));
 }
 
 .fruitpics2 {
@@ -309,22 +391,31 @@ body {
   position: relative;
 }
 
+
 /* Make images scale while keeping a neat square look */
 .fruitpics1 img,
 .fruitpics2 img {
-  width: clamp(120px, 12vw, 200px); /* steadier than min(28vw, 200px) */
+  width: clamp(80px, 12vw, 120px);  
   aspect-ratio: 1 / 1;
   height: auto;
   object-fit: cover;
-  border: 2px solid black;
-  border-radius: 8px;
 }
 
 /* figure alignment (image and button) */
 .fruitpics1 figure,
 .fruitpics2 figure {
-  text-align: center;
+  position: relative;                /* local stacking context */
+  width: clamp(160px, 14vw, 220px);  /* consistent card width */
+  aspect-ratio: 1 / 1;               /* neat square */
+  overflow: visible;                  /* let tall fruit (pineapple) poke out if needed */
   margin: 0;
+  text-align: center;
+}
+
+.fruitpics1 figcaption,
+.fruitpics2 figcaption {
+  margin-top: 8px;
+  font-weight: 600;
 }
 /* button alignment (button only) */
 a.fruit1-button-class,
@@ -335,6 +426,31 @@ a.fruit2-button-class {
   color: #333;
   margin-top: 8px;
   text-decoration: none;
+  z-index: 1;
+}
+
+.fruitpics1 .woodtable,
+.fruitpics2 .woodtable {
+  position: absolute;
+  bottom: 0;                           /* sit on the “floor” of the card */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;                         /* match the card’s width */
+  height: auto;
+  z-index: 1;
+  pointer-events: none;                /* never block clicks */
+}
+
+.fruitpics1 .fruitontable,
+.fruitpics2 .fruitontable {
+  position: absolute;                  /* layer above table */
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20%;                         /* adjust “how high” it sits on table */
+  width: 70%;                          /* fruit scale relative to card */
+  height: auto;
+  z-index: 2;
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,.25)); /* subtle lift */
 }
 
 /*----------------BELOW MIDDLE ROW----------------------------------------------------------------------------*/
