@@ -29,49 +29,36 @@
 
         <div class="bottom-rect">
 
-            <div class="left-rect">
-                <div class="leftsign">
-                    <div class="lefttree">
+            <div class="left-rect"> <!-- /.left-rect -->
+                <div class="leftsign"> <!-- /.leftsign -->
+
+                    <div class="lefttree"> <!-- /.lefttree -->
                         <img class="lefttree-img" src="../static/images/homepage/leftpalm.png" alt="lefttree">
-                    </div>
-                    <div class="leftfloorsigndiv">
+                    </div> <!-- /.lefttree -->
+
+                    <div class="leftfloorsigndiv"> <!-- /.leftfloorsigndiv -->
                         <img class="leftfloorsign" src="../static/images/homepage/floorwoodsign.png" alt="sign">
                         <p class="fruitofday">New Fruits!</p>
-                    </div>
-                     
-                <div class="slideshowHome">
+                        
+                    </div> <!-- /.leftfloorsigndiv -->
 
-                    <div class="mySlidesHome">
-                        <img src="../static/images/fruitoftheday/tomato1.png">
-                    </div>
+                    <div class="slideshowHome"> <!-- /.slideshowHome -->
+                        <div class="mySlidesHome tomato">
+                            <img src="../static/images/fruitoftheday/tomato1.png" alt="tomato">
+                        </div>
 
-                    <div class="mySlidesHome">
-                        <img src="../static/images/fruitoftheday/raspberry.jpg">
-                    </div>
+                            <div class="mySlidesHome orange">
+                                <img src="../static/images/fruitoftheday/orange1.png" alt="orange">
+                            </div>
+                    </div> <!-- /.slideshowHome -->
 
-                    <div class="mySlidesHome">
-                        <img src="../static/images/fruitoftheday/orange1.png">
-                    </div>
-
-                        <div class="mySlidesHome">
-                        <img src="../static/images/fruitoftheday/kiwi.jpg">
+                    <div class="crabchef">
+                        <img  src="../static/images/homepage/crabchef.png" alt="crabchef">
                     </div>
 
-                        <div class="mySlidesHome">
-                        <img src="../static/images/fruitoftheday/jackfruit.jpg">
-                    </div>
+                </div> <!-- /.leftsign -->  <!-- ✅ this was missing -->
+            </div> <!-- /.left-rect -->
 
-                    <div class="mySlidesHome">
-                        <img src="../static/images/fruitoftheday/cantaloupe.jpg">
-                    </div>
-
-                    <div class="mySlidesHome">
-                        <img src="../static/images/fruitoftheday/apple.jpg">
-                    </div>
-
-                </div>
-                </div>
-            </div>
 
             <div class="right-rect">
                 <div class="rightsign">
@@ -115,8 +102,9 @@
                             <!--<figcaption>Pineapples</figcaption>-->
                         </figure>
                     </a>
+                    
                 </div>
-
+                    
                 <!------------------------SECOND ROW OF PICS----------------------------------------------->
                 <div class="fruitpics2"> 
                     <a href="{{ url_for('strawberries_page') }}" class="fruit2-button-class">

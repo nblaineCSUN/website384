@@ -1,0 +1,9 @@
+# Start start flask and run php server on localhost:5000
+
+# Activate Python virtual environment
+echo "Activating Virtual Environment..."
+source .venv/bin/activate
+
+# Start Flask on port 5000
+echo "Starting Flask server on http://127.0.0.1:5000 ..."
+flask run 
