@@ -217,11 +217,7 @@ body {
   border-radius: 50%;         /* circle */
 
   border: 3px solid gold;     /* faint gold border */
-  box-shadow: 
-    0 0 15px rgba(255, 215, 0, 0.8),   /* inner glow */
-    0 0 30px rgba(255, 215, 0, 0.6),   /* mid glow */
-    0 0 60px rgba(255, 165, 0, 0.5),   /* warm golden aura */
-    0 0 90px rgba(255, 140, 0, 0.4);   /* diffuse blurred aura */
+
 }
 
 /* Current slide: visible */
@@ -271,8 +267,15 @@ body {
 
 .crabchef {
   margin-top: -350px;
-  right: -60px;
+  right: -65px;
   position: relative;
+}
+
+.fruitbasket img {
+  width: 37%;
+  position: relative;
+  top: -80px;
+ 
 }
 
 
