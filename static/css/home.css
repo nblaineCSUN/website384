@@ -186,10 +186,27 @@ body {
   right: -120px;
 }
 
+.slideshowHome img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 
+  width: 70%;              
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
 
+  background-size: cover;   
+  background-position: center;
+  background-repeat: no-repeat;
+       
+  pointer-events: none;     
+  z-index: 2;
+}
 
-
+.mySlidesHome.raspberry img {
+  width: 100% !important; 
+}
 
 .mySlidesHome {
   position: absolute;
@@ -198,44 +215,6 @@ body {
   opacity: 0;
   transition: left 0.7s ease-in-out; /* slide animation */
 
-}
-
-.mySlidesHome.tomato img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-
-  width: 70%;              
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-
-  background-size: cover;   
-  background-position: center;
-  background-repeat: no-repeat;
-       
-  pointer-events: none;     
-  z-index: 2;
-}
-
-.mySlidesHome.orange img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-
-  width: 70%;              
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-
-  
-  background-size: cover;   
-  background-position: center;
-  background-repeat: no-repeat;
-
-       
-  pointer-events: none;     
-  z-index: 2;
 }
 
 /* Current slide: visible */
