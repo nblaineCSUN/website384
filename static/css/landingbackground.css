@@ -13,8 +13,12 @@
     height: 50%;
     width: 50%;
 }
-body {
-    background-image: url('https://www.google.com/imgres?q=beach%20fruit%20bar%20website%20background&imgurl=https%3A%2F%2Fimg.freepik.com%2Fpremium-photo%2Fgenerative-ai-tropical-summer-sunset-beach-bar-background-wooden-table_93150-14616.jpg%3Fsemt%3Dais_incoming%26w%3D740%26q%3D80&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fbeach-bar-background&docid=DXjOCEZh77prqM&tbnid=mntI7EYSnO0JaM&vet=12ahUKEwj1lLDR8t6PAxWgKEQIHe4fJ9EQM3oECHwQAA..i&w=740&h=370&hcb=2&ved=2ahUKEwj1lLDR8t6PAxWgKEQIHe4fJ9EQM3oECHwQAA');
+.top-rect-country {
+    background-color: purple;
 
+}
+
+.right-rect-country img {
+    width: 25%;
 }
 

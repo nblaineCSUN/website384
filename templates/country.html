@@ -3,15 +3,15 @@
 {% block body %}
 <div class="wholething">
   <!--<img src="../static/images/beachbar.jpg" class="landingbackground"> -->
-  <div class="top-rect">
+  <div class="top-rect-country">
     
     <p id="title">{{ country.name }}</p>
     <a href="{{ url_for('space_page') }}">🔀 Show Another Random Country</a>
   </div>
 
-  <div class="bottom-rect">
-    <div class="left-rect">
-      <h2 class="fruitofday">Fruit Facts</h2>
+  <div class="bottom-rect-country">
+    <div class="left-rect-country">
+      <h2 class="fruitofday-country">Fruit Facts</h2>
       <ul>
         {% for f in facts %}
           <li>
@@ -31,7 +31,7 @@
       </ul>
     </div>
 
-    <div class="right-rect">
+    <div class="right-rect-country">
       {% if country.hero_image %}
         {% set img = country.hero_image|replace('\\','/') %}
         {% if '://' in img %}

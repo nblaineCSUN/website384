@@ -444,7 +444,7 @@ body {
 .fruitpics1,
 .fruitpics2 {
   background-image: url("../images/homepage/bamboofloor.png");
-  width: 100%;
+  width: 90%;
   background-size: 200px 200px;     /* scale down texture (try 80px, 100px, 120px) */
   image-rendering: pixelated; 
   margin: 24px auto 0;   /* center rows */
