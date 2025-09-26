@@ -1,7 +1,7 @@
-.homebutton {
-    position: flex;
-    font-size: 50px;
-    float: right;
+.homebutt {
+    font-size: 36px;
+    position: relative;
+
 }
 
 .landingbackground {
@@ -9,16 +9,30 @@
     width: 100%;
 }
 
-.newimg {
-    height: 50%;
-    width: 50%;
+body {
+    background-image: url("../images/countrytemp/nebula.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: silver;
 }
+
 .top-rect-country {
-    background-color: purple;
-
+    border-color: red;
 }
 
-.right-rect-country img {
-    
+.left-rect-country {
+    border-color: orange;
+}
+
+.right-rect-country {
+    border-color: yellow;
+}
+
+.bottom-rect-country {
+    border-color: green;
+}
+
+.bottom-rect-country img {
+    border-color: blue;
 }
 

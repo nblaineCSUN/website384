@@ -1,12 +1,16 @@
 {% extends "landingbackground.html" %}
 {% block title %}{{ country.name }} - Fruit Facts{% endblock %}
 {% block body %}
+<div class="homebutt">
+      <a href="{{ url_for('backhome_page') }}" class="homebutton">HOME PAGE</a>
+</div>  
 <div class="wholething">
   <!--<img src="../static/images/beachbar.jpg" class="landingbackground"> -->
+
   <div class="top-rect-country">
-    
+ 
     <p id="title">{{ country.name }}</p>
-    <a href="{{ url_for('space_page') }}">🔀 Show Another Random Country</a>
+    
   </div>
 
   <div class="bottom-rect-country">
@@ -44,6 +48,9 @@
       {% endif %}
       <p class="worldFruit">{{ country.summary }}</p>
     </div>
+  </div>
+  <div>
+    <img class="alien" src="../static/images/countrytemp/alien.png">
   </div>
 </div>
 {% endblock %}

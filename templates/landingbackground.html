@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="/static/images/favicon.png">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/landingbackground.css') }}">
-    
   </head>
-  <div class="homebutt">
-    <a href="{{ url_for('backhome_page') }}" class="homebutton">HOME PAGE</a>
-  </div>
+
   <body>
+
     {% block body %}{% endblock %}
+    <a href="{{ url_for('space_page') }}" class="reroll">🔀 Show Another Random Country</a>
   </body>
 
 </html>
