@@ -178,25 +178,18 @@ body {
 
 .slideshowHome {
   position: relative;
-  width: 55px;   
-  height: 55px;  
+  width: 65px;   
+  height: 65px;  
   overflow: hidden;
   margin: 0 auto;
   top: -249px;
   right: -120px;
 }
 
-.mySlidesHome.tomato img {
-  width: 79%;   
-  height: auto;
-  aspect-ratio: 1 / 1;
-  height: auto;
-  object-fit: cover;
-  border-radius: 50%;         /* circle */
 
-  border: 3px solid gold;     /* faint gold border */
- 
-}
+
+
+
 
 .mySlidesHome {
   position: absolute;
@@ -204,20 +197,45 @@ body {
   left: -100%;
   opacity: 0;
   transition: left 0.7s ease-in-out; /* slide animation */
+
+}
+
+.mySlidesHome.tomato img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 70%;              
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+
+  background-size: cover;   
+  background-position: center;
+  background-repeat: no-repeat;
+       
+  pointer-events: none;     
+  z-index: 2;
 }
 
 .mySlidesHome.orange img {
-  width: 65%;
-  height: auto;
-  padding: 6px;  
-  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 70%;              
   aspect-ratio: 1 / 1;
-  height: auto;
-  object-fit: cover;
-  border-radius: 50%;         /* circle */
+  border-radius: 50%;
 
-  border: 3px solid gold;     /* faint gold border */
+  
+  background-size: cover;   
+  background-position: center;
+  background-repeat: no-repeat;
 
+       
+  pointer-events: none;     
+  z-index: 2;
 }
 
 /* Current slide: visible */
@@ -264,6 +282,10 @@ body {
   transform: rotateY(180deg);
 }
 
+.lefttree-img img {
+  left: -200px;
+}
+
 
 .crabchef {
   margin-top: -350px;
@@ -275,7 +297,7 @@ body {
   width: 37%;
   position: relative;
   top: -80px;
- 
+
 }
 
 
@@ -399,11 +421,11 @@ body {
 
 .fruitpics1 .fruitontable,
 .fruitpics2 .fruitontable {
-  position: absolute;                  /* layer above table */
+  position: absolute;                  
   left: 50%;
   transform: translateX(-50%);
-  bottom: 20%;                         /* adjust “how high” it sits on table */
-  width: 70%;                          /* fruit scale relative to card */
+  bottom: 20%;                         
+  width: 70%;                          
   height: auto;
   z-index: 2;
   filter: drop-shadow(0 8px 12px rgba(0,0,0,.25)); /* subtle lift */
@@ -424,13 +446,13 @@ body {
 .fruitpics1 .woodtable,
 .fruitpics2 .woodtable {
   position: absolute;
-  bottom: 0;                           /* sit on the “floor” of the card */
+  bottom: 0;                          
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;                         /* match the card’s width */
+  width: 100%;                        
   height: auto;
   z-index: 1;
-  pointer-events: none;                /* never block clicks */
+  pointer-events: none;                
 }
 
 /* ----------Fruit Pics 2 Box Editing--------------------------------------------------------------------- */

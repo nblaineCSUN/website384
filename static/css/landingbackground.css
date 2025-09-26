@@ -1,7 +1,8 @@
-.homebutt {
-    font-size: 36px;
+.homebutt img {
     position: relative;
-
+    width: 5%;
+    right: -956px;
+    bottom: -100px;
 }
 
 .landingbackground {
@@ -14,6 +15,12 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     color: silver;
+    
+}
+
+.wholething {
+    z-index: 1;
+    
 }
 
 .top-rect-country {
@@ -36,3 +43,68 @@ body {
     border-color: blue;
 }
 
+.scene {
+  position: relative;
+  width: min(60vw, 780px);       /* scale the whole composition */
+ 
+}
+
+/* big green alien */
+.alien {
+  display: block;
+  width: 80%;
+  height: auto;
+  image-rendering: pixelated;    /* keep that crisp retro look */
+  pointer-events: none;          /* never grabs clicks */
+  left: -200px;
+}
+
+/* place the portal on the alien's belly */
+.portal,
+.portal-hit {
+  position: absolute;
+  left: 328.9px;
+  top: 536px;
+  transform: translate(-50%, -50%);
+  width: 8.8%;                    /* portal size */
+  aspect-ratio: 1 / 1;
+  border-radius: 40%;
+  transform: scaleY(1.3);
+}
+
+/* the visual swirl + glow (not clickable) */
+.portal {
+  pointer-events: none;
+  background-image: url('https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3aHdnaTcybmh2ZGN3M2ljNHkyNHFnNzIxOWl3ajdlbThocG52ZjNvdiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/mX1bWOEGPIAY1yhmKI/giphy.gif');
+  --zoom: 7.0;
+  background-size: calc(var(--zoom) * 100%);
+  background-position: center;
+  box-shadow:
+    0 0 18px 6px rgba(0, 200, 255, 0.45),
+    inset 0 0 22px rgba(255, 255, 255, 0.35);
+  z-index: 2;
+   
+}
+
+/* the ONLY clickable area — clipped to a true circle */
+.portal-hit {
+  z-index: 3;                    /* above alien/portal, below astro */
+  display: block;
+  background: transparent;
+  /* ensure the hit-testing is circular on all modern browsers */
+  clip-path: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+}
+
+/* astronaut outside the portal */
+.astro {
+  position: absolute;
+  left: 52%;
+  top: 75%;
+  transform: translate(-50%, -50%) rotateY(180deg);
+  width: 19%;
+  height: auto;
+  pointer-events: none;          /* clicks pass through to the portal-hit */
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,.35));
+  z-index: 4;
+}
