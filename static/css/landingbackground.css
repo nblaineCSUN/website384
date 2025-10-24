@@ -1,7 +1,7 @@
 .homebutt img {
     position: relative;
-    width: 5%;
-    right: -956px;
+    width: 12%;
+    right: -1000px;
     bottom: -100px;
 }
 
@@ -15,6 +15,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     color: silver;
+    width: 1000px;
     
 }
 
@@ -25,10 +26,19 @@ body {
 
 .top-rect-country {
     border-color: red;
+    position: relative;
+    
 }
 
 .left-rect-country {
     border-color: orange;
+    position: relative;
+    right: -500px;
+}
+
+.worldFruit {
+    position: relative;
+    
 }
 
 .right-rect-country {
@@ -41,6 +51,13 @@ body {
 
 .bottom-rect-country img {
     border-color: blue;
+    position: relative;
+    top: -633px;
+    right: -588px;
+    width: 90px;
+    height: 75px;
+    transform: rotate(45deg);
+    
 }
 
 .scene {
@@ -57,6 +74,15 @@ body {
   image-rendering: pixelated;    /* keep that crisp retro look */
   pointer-events: none;          /* never grabs clicks */
   left: -200px;
+  z-index: 2;
+}
+
+.flagpole {
+  position: relative;
+  top: -335px;
+  right: -500px;
+  
+  z-index: 1;
 }
 
 /* place the portal on the alien's belly */
@@ -100,7 +126,7 @@ body {
 .astro {
   position: absolute;
   left: 52%;
-  top: 75%;
+  top: 65%;
   transform: translate(-50%, -50%) rotateY(180deg);
   width: 19%;
   height: auto;
