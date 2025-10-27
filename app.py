@@ -27,6 +27,10 @@ def home():
     countries = db_query_all("SELECT slug, name FROM countries ORDER BY name")
     return render_template("index.html", countries=countries)
 
+@app.route("/")
+def index():
+    return render_template("index.html")
+
 @app.route("/random")
 def random_page():
     rows = db_query_all("SELECT * FROM countries")
@@ -73,6 +77,11 @@ def grapes_page():
 @app.route("/watermelons")
 def watermelons_page():
     return render_template("featuredfruit/watermelons.html")
+
+# GAME
+@app.route("/garden")
+def gardenTD():
+    return render_template("game.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

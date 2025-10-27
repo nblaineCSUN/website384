@@ -49,7 +49,7 @@ body {
     border-color: green;
 }
 
-.bottom-rect-country img {
+.right-rect-country img {
     border-color: blue;
     position: relative;
     top: -633px;
@@ -58,6 +58,16 @@ body {
     height: 75px;
     transform: rotate(45deg);
     
+}
+
+.speech {
+  position: relative;
+  border-color: pink;
+}
+
+.speechgif {
+  position: relative;
+  background-image: url("../images/countrytemp/nebula.jpg");
 }
 
 .scene {
