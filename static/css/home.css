@@ -10,6 +10,8 @@
     src: url('../fonts/MISTV___.TTF') format('truetype');
 }
 
+
+
 /* 1) Make the fixed header play nicely with all screens */
 :root { --header-h: clamp(250px, 12vw, 160px); } /* scales with viewport */
 
@@ -43,6 +45,37 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 } 
+/*------------------Crab Merchant---------------------------------------------------------------*/
+
+
+
+
+.crabmerchant {
+  --crab-w: 10%;         
+  width: var(--crab-w); /*variable for keyframes*/
+  position: relative;
+  animation: slideLR 25s ease-in-out infinite;
+}
+
+@keyframes slideLR {
+  0% {
+    left: 0;
+    transform: scaleX(1);                         /* facing right */
+  }
+  50% {
+    left: calc(100% - var(--crab-w));            /* at right edge */
+    transform: scaleX(1);
+  }
+  51% {
+    left: calc(100% - var(--crab-w));
+    transform: scaleX(-1);                        /* flip */
+  }
+  100% {
+    left: 0;
+    transform: scaleX(-1);                        /* back left, facing left */
+  }
+}
+
 /*------------------TOP AND BOTTOM RECTANGLES---------------------------------------------------------------*/
 .top-rect {
   position: fixed;
@@ -191,17 +224,25 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-
-  width: 70%;              
+  width: 70%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-
-  background-size: cover;   
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-       
-  pointer-events: none;     
+  pointer-events: none;
   z-index: 2;
+
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-15px);
+  }
 }
 
 .mySlidesHome.raspberry img {
@@ -274,7 +315,6 @@ body {
   width: 37%;
   position: relative;
   top: -80px;
-
 }
 
 

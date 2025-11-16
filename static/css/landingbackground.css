@@ -1,7 +1,12 @@
+@font-face {
+    font-family: 'Squiggles'; 
+    src: url('../fonts/Squiggles.otf') format('truetype');
+}
+
 .homebutt img {
     position: relative;
     width: 12%;
-    right: -1000px;
+    right: -1125px;
     bottom: -100px;
 }
 
@@ -36,9 +41,48 @@ body {
     right: -500px;
 }
 
+.speech {
+  position: relative;
+  display: inline-block;      
+  z-index: 3;   
+  top: -100px;
+  right: -80px;
+}
+
+.speech-img {
+  display: block;
+  width: min(670px, 180vw);    
+  height: auto;
+}
+
+/* overlay the words on top of the bubble */
+.speechwords {
+  position: absolute;
+  inset: 30% 10% 18% 14%;     
+  z-index: 4;                 
+  color: #1a1a1a;             
+  line-height: 1.25;
+  text-align: left;           
+}
+
+.speechwords p {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.speechwordsStyling { 
+  font-size: clamp(20px, 2.2vw, 30px); 
+}
+
+.speechwordsFruitName {
+  font-size: clamp(26px, 2.6vw, 36px);
+  /* font-family: 'Squiggles', sans-serif; */
+}
+
+
 .worldFruit {
     position: relative;
-    
 }
 
 .right-rect-country {
@@ -52,23 +96,17 @@ body {
 .right-rect-country img {
     border-color: blue;
     position: relative;
-    top: -633px;
-    right: -588px;
+    top: -565px;
+    right: -510px;
     width: 90px;
     height: 75px;
     transform: rotate(45deg);
     
 }
 
-.speech {
-  position: relative;
-  border-color: pink;
-}
 
-.speechgif {
-  position: relative;
-  background-image: url("../images/countrytemp/nebula.jpg");
-}
+
+
 
 .scene {
   position: relative;
@@ -140,7 +178,19 @@ body {
   transform: translate(-50%, -50%) rotateY(180deg);
   width: 19%;
   height: auto;
-  pointer-events: none;          /* clicks pass through to the portal-hit */
+  pointer-events: none;
   filter: drop-shadow(0 6px 10px rgba(0,0,0,.35));
   z-index: 4;
+
+  animation: floatAstro 5s ease-in-out infinite;
+}
+
+
+@keyframes floatAstro {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotateY(180deg) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotateY(180deg) translateY(-15px);
+  }
 }

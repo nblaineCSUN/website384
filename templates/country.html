@@ -31,39 +31,35 @@
 
 
   <div class="bottom-rect-country">
-    <div class="left-rect-country">
-        <div class="top-rect-country">
-          <h1 id="title">{{ country.name }}</h1> 
-        </div>
+    <div class="speech">
+        
         <div class="speech">
-          <img src="../static/images/countrytemp/speech.png" alt="speech">
-          <div class="speechgif" alt="speechgif">
-            <p>TEXT</p>
+          <img class="speech-img" src="../static/images/countrytemp/speech.png" alt="speech">
+
+          <div class="speechwords">
+            <p class="speechwordsStyling">Ahhh.. <strong>{{ country.name}}</strong>, home to the <em>delicious</em></p>
+
+            {% for f in facts %}
+              <p class="speechwordsFruitName">{{ f.fruit }}!</p>
+              <p class="speechwordsFruitFact">{{ f.fact }}.</p>
+              <p class="worldFruit">{{ country.summary }}</p>
+              {% if f.fruit_image %}
+                {% set fimg = f.fruit_image|replace('\\','/') %}
+                {% if '://' in fimg %}
+                  <img src="{{ fimg }}" alt="{{ f.fruit }}" class="newimg">
+                {% else %}
+                  {% set ffile = fimg.startswith('static/') and fimg[7:] or fimg %}
+                  <img src="{{ url_for('static', filename=ffile) }}" alt="{{ f.fruit }}">
+                {% endif %}
+              {% endif %}
+            {% endfor %}
           </div>
         </div>
-      <h2 class="fruitofday-country">Fruit Facts</h2>
-      <ul>
-        {% for f in facts %}
-          <li>
-            <strong>{{ f.fruit }}:</strong> {{ f.fact }}
-            <p class="worldFruit">{{ country.summary }}</p>
-            {% if f.fruit_image %}
-              {% set fimg = f.fruit_image|replace('\\','/') %}
-              {% if '://' in fimg %}
-                <img src="{{ fimg }}" alt="{{ f.fruit }}" class="newimg">
-              {% else %}
+        <!-- </div> -->
 
-                {# Strip leading "static/" if present, then serve via url_for #}
 
-                {% set ffile = fimg.startswith('static/') and fimg[7:] or fimg %}
-                <img src="{{ url_for('static', filename=ffile) }}" alt="{{ f.fruit }}">
-              {% endif %}
-            {% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-    
+
+    <!--TOWEL-->
     <div class="right-rect-country">
       {% if country.hero_image %}
         {% set img = country.hero_image|replace('\\','/') %}
