@@ -118,7 +118,7 @@ body {
 /*-------------------RIGHT RECT TOWEL PORTAL-------------------------------------------------------------*/
 .worldFruit {
   position: absolute;
-  top: 8%;               /* adjust to sit above the portal */
+  top: 12%;               /* adjust to sit above the portal */
   left: 50%;
   transform: translateX(-50%);
   color: black;
@@ -127,7 +127,7 @@ body {
      1px -1px 0 white,
     -1px  1px 0 white,
      1px  1px 0 white;
-  font-size: 28px;
+  font-size: 18px;
   font-weight: bold;
   text-align: center;
   width: 80%;             /* prevent wrapping off edges */
@@ -137,8 +137,8 @@ body {
 
 .towel {
   position: relative;
-  width: 100%;
-  max-width: 420px;
+  width: 150%;
+  right: 200px;
   margin: 0 auto;
 }
 
@@ -156,7 +156,7 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 
-  width: 55%;                /* portal size relative to towel width */
+  width: 50%;                /* portal size relative to towel width */
   aspect-ratio: 1 / 1;
   border-radius: 50%;
 
