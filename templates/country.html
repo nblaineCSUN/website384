@@ -41,7 +41,7 @@
 
             {% for f in facts %}
               <p class="speechwordsFruitName">{{ f.fruit }}!</p>
-              <p class="speechwordsFruitFact">{{ f.fact }}.</p>
+              <p class="speechwordsFruitFact">{{ f.fact }}</p>
               <p class="worldFruit">{{ country.summary }}</p>
               {% if f.fruit_image %}
                 {% set fimg = f.fruit_image|replace('\\','/') %}

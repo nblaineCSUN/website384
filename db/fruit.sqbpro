@@ -1,61 +1,186 @@
-<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="fruit.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure pragmas query browser" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1116"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="countries" custom_title="0" dock_id="1" table="4,9:maincountries"/><dock_state state="000000ff00000000fd0000000100000002000005f40000034efc0100000001fb000000160064006f0063006b00420072006f00770073006500310100000000000005f40000011e00ffffff000002580000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="countries" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="29"/><column index="2" value="257"/><column index="3" value="257"/><column index="4" value="300"/><column index="5" value="458"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="fruit_facts" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="29"/><column index="2" value="70"/><column index="3" value="93"/><column index="4" value="300"/><column index="5" value="500"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1*">-- Update hero_image to Flagpedia-style filenames (PNG) while keeping the same path
-WITH codes(slug, code) AS (
-  VALUES
-    ('afghanistan','af'),
-    ('albania','al'),
-    ('algeria','dz'),
-    ('andorra','ad'),
-    ('angola','ao'),
-    ('antigua-and-barbuda','ag'),
-    ('argentina','ar'),
-    ('armenia','am'),
-    ('australia','au'),
-    ('austria','at'),
-    ('azerbaijan','az'),
-    ('bahamas','bs'),
-    ('bahrain','bh'),
-    ('bangladesh','bd'),
-    ('barbados','bb'),
-    ('belarus','by'),
-    ('belgium','be'),
-    ('belize','bz'),
-    ('benin','bj'),
-    ('bhutan','bt'),
-    ('bolivia','bo'),
-    ('bosnia-and-herzegovina','ba'),
-    ('botswana','bw'),
-    ('brazil','br'),
-    ('brunei','bn'),
-    ('bulgaria','bg'),
-    ('burkina-faso','bf'),
-    ('burundi','bi'),
-    ('cabo-verde','cv'),
-    ('cambodia','kh'),
-    ('cameroon','cm'),
-    ('canada','ca'),
-    ('central-african-republic','cf'),
-    ('chad','td'),
-    ('chile','cl'),
-    ('china','cn'),
-    ('colombia','co'),
-    ('comoros','km'),
-    ('congo','cg'),  -- Republic of the Congo
-    ('costa-rica','cr'),
-    ('cote-divoire','ci'),
-    ('croatia','hr'),
-    ('cuba','cu'),
-    ('cyprus','cy'),
-    ('czechia','cz'),
-    ('democratic-republic-of-the-congo','cd'),
-    ('denmark','dk'),
-    ('djibouti','dj'),
-    ('dominica','dm'),
-    ('dominican-republic','do')
-)
-UPDATE countries
-SET hero_image = 'static/images/countries/' || (
-  SELECT code || '.png' FROM codes WHERE codes.slug = countries.slug
-)
-WHERE slug IN (SELECT slug FROM codes);
-
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="fruit.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1699"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="countries" custom_title="0" dock_id="1" table="4,9:maincountries"/><dock_state state="000000ff00000000fd00000001000000020000083b000004f8fc0100000001fb000000160064006f0063006b00420072006f007700730065003101000000000000083b0000013500ffffff000002690000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="countries" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="35"/><column index="2" value="300"/><column index="3" value="300"/><column index="4" value="300"/><column index="5" value="247"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="fruit_facts" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="35"/><column index="2" value="71"/><column index="3" value="103"/><column index="4" value="300"/><column index="5" value="300"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1*">UPDATE countries SET summary = 'Ecuador is fruit-rich, known for mangoes, cacao, and high-Andes produce.' WHERE id = 51;
+UPDATE countries SET summary = 'Egypt is famed for sweet dates from Nile oases and citrus along the Delta.' WHERE id = 52;
+UPDATE countries SET summary = 'El Salvador grows tropical papaya, mango, and coffee cherries on volcanic slopes.' WHERE id = 53;
+UPDATE countries SET summary = 'Equatorial Guinea enjoys bananas, plantains, and coastal tropical fruits.' WHERE id = 54;
+UPDATE countries SET summary = 'Eritrea relies on hardy fruits like dates and prickly pear in arid zones.' WHERE id = 55;
+UPDATE countries SET summary = 'Estonia highlights cool-climate apples, currants, and forest berries.' WHERE id = 56;
+UPDATE countries SET summary = 'Eswatini has a warm climate ideal for pineapples, mangoes, and citrus.' WHERE id = 57;
+UPDATE countries SET summary = 'Ethiopia is the birthplace of coffee and grows mangoes, bananas, and citrus.' WHERE id = 58;
+UPDATE countries SET summary = 'Falkland Islands feature hardy berries and greenhouse produce suited to cool winds.' WHERE id = 59;
+UPDATE countries SET summary = 'Faroe Islands cultivate greenhouse rhubarb and berries in a cool maritime climate.' WHERE id = 60;
+UPDATE countries SET summary = 'Fiji is rich in pineapples, bananas, papayas, and breadfruit.' WHERE id = 61;
+UPDATE countries SET summary = 'Finland is known for wild bilberries, lingonberries, and cloudberries.' WHERE id = 62;
+UPDATE countries SET summary = 'France is world-renowned for wine grapes, apples, and stone fruits.' WHERE id = 63;
+UPDATE countries SET summary = 'French Guiana produces passionfruit, guava, and other Amazonian fruits.' WHERE id = 64;
+UPDATE countries SET summary = 'French Polynesia abounds with coconuts, breadfruit, and tropical citrus.' WHERE id = 65;
+UPDATE countries SET summary = 'French Southern Territories have little agriculture; fruit supplies are imported.' WHERE id = 66;
+UPDATE countries SET summary = 'Gabon offers papaya, plantain, and forest fruits across equatorial zones.' WHERE id = 67;
+UPDATE countries SET summary = 'Gambia grows groundnuts alongside mango, baobab fruit, and citrus.' WHERE id = 68;
+UPDATE countries SET summary = 'Georgia is historic wine country with native grapes and orchard fruits.' WHERE id = 69;
+UPDATE countries SET summary = 'Germany produces abundant apples, berries, and orchard fruit regionally.' WHERE id = 70;
+UPDATE countries SET summary = 'Ghana is a cocoa powerhouse and grows pineapple, mango, and plantain.' WHERE id = 71;
+UPDATE countries SET summary = 'Gibraltar enjoys Mediterranean figs, citrus, and table grapes.' WHERE id = 72;
+UPDATE countries SET summary = 'Greece is celebrated for olives, citrus, figs, and grapes.' WHERE id = 73;
+UPDATE countries SET summary = 'Greenland has short summers with wild crowberries and blueberries.' WHERE id = 74;
+UPDATE countries SET summary = 'Grenada, the Island of Spice, also grows nutmeg, cocoa, and tropical fruit.' WHERE id = 75;
+UPDATE countries SET summary = 'Guadeloupe offers guava, bananas, sugarcane, and tropical citrus.' WHERE id = 76;
+UPDATE countries SET summary = 'Guam grows papayas, bananas, breadfruit, and citrus year-round.' WHERE id = 77;
+UPDATE countries SET summary = 'Guatemala is known for Hass avocados, bananas, and coffee cherries.' WHERE id = 78;
+UPDATE countries SET summary = 'Guernsey produces tomatoes and greenhouse fruit in a mild marine climate.' WHERE id = 79;
+UPDATE countries SET summary = 'Guinea grows bananas, pineapples, and mangoes across humid zones.' WHERE id = 80;
+UPDATE countries SET summary = 'Guinea-Bissau is a major cashew producer and grows mangoes and papayas.' WHERE id = 81;
+UPDATE countries SET summary = 'Guyana features mangoes, coconuts, and diverse tropical orchard fruit.' WHERE id = 82;
+UPDATE countries SET summary = 'Haiti produces sugarcane, mangoes, and breadfruit in tropical valleys.' WHERE id = 83;
+UPDATE countries SET summary = 'Heard Island and McDonald Islands are subantarctic; fresh fruit is not grown.' WHERE id = 84;
+UPDATE countries SET summary = 'Holy See relies on Italian Mediterranean fruit traditions, especially olives and grapes.' WHERE id = 85;
+UPDATE countries SET summary = 'Honduras exports bananas and grows pineapples, melons, and mangoes.' WHERE id = 86;
+UPDATE countries SET summary = 'Hong Kong markets are famed for lychee, longan, and imported tropical fruit.' WHERE id = 87;
+UPDATE countries SET summary = 'Hungary is known for sour cherries, apricots, and plums.' WHERE id = 88;
+UPDATE countries SET summary = 'Iceland cultivates berries and tomatoes in geothermal greenhouses.' WHERE id = 89;
+UPDATE countries SET summary = 'India is diverse in fruit: mangoes, bananas, citrus, and pomegranates.' WHERE id = 90;
+UPDATE countries SET summary = 'Indonesia grows durian, mangosteen, salak, bananas, and coconuts.' WHERE id = 91;
+UPDATE countries SET summary = 'Iran is renowned for pomegranates, pistachios, dates, and citrus.' WHERE id = 92;
+UPDATE countries SET summary = 'Iraq oases produce dates, citrus, and pomegranates along river valleys.' WHERE id = 93;
+UPDATE countries SET summary = 'Ireland features apples, berries, and orchard cider traditions.' WHERE id = 94;
+UPDATE countries SET summary = 'Isle of Man grows heritage apples and soft fruit in a mild climate.' WHERE id = 95;
+UPDATE countries SET summary = 'Israel exports citrus and grows dates, olives, and pomegranates.' WHERE id = 96;
+UPDATE countries SET summary = 'Italy is a Mediterranean fruit leader: olives, citrus, grapes, and figs.' WHERE id = 97;
+UPDATE countries SET summary = 'Jamaica is rich in bananas, mangoes, and ackee.' WHERE id = 98;
+UPDATE countries SET summary = 'Japan produces premium melons, citrus, strawberries, and grapes.' WHERE id = 99;
+UPDATE countries SET summary = 'Jersey is famed for early potatoes and also grows apples and soft fruit.' WHERE id = 100;
+UPDATE countries SET summary = 'Jordan cultivates olives, dates, and citrus across its valleys.' WHERE id = 101;
+UPDATE countries SET summary = 'Kazakhstan is considered a cradle of the apple and grows stone fruits.' WHERE id = 102;
+UPDATE countries SET summary = 'Kenya exports avocados and grows pineapples, mangoes, and passionfruit.' WHERE id = 103;
+UPDATE countries SET summary = 'Kiribati relies on coconuts, breadfruit, and pandanus across atolls.' WHERE id = 104;
+UPDATE countries SET summary = 'Korea DPR grows apples, pears, and other temperate orchard fruits.' WHERE id = 105;
+UPDATE countries SET summary = 'Korea Republic is known for crisp Asian pears, apples, and citrus.' WHERE id = 106;
+UPDATE countries SET summary = 'Kuwait enjoys oasis dates and imported fruits suited to desert life.' WHERE id = 107;
+UPDATE countries SET summary = 'Kyrgyzstan produces prized apricots, apples, and walnuts in mountain valleys.' WHERE id = 108;
+UPDATE countries SET summary = 'Laos grows bananas, mangoes, and papayas in tropical lowlands.' WHERE id = 109;
+UPDATE countries SET summary = 'Latvia features forest berries, apples, and currants.' WHERE id = 110;
+UPDATE countries SET summary = 'Lebanon grows citrus, grapes, figs, and olives along its coast.' WHERE id = 111;
+UPDATE countries SET summary = 'Lesotho cultivates peaches and apples in cool highland climates.' WHERE id = 112;
+UPDATE countries SET summary = 'Liberia produces mangoes, pineapples, and coconuts in humid tropics.' WHERE id = 113;
+UPDATE countries SET summary = 'Libya centers on date palms and oasis citrus in the Sahara.' WHERE id = 114;
+UPDATE countries SET summary = 'Liechtenstein shares Alpine fruit traditions with grapes and orchard produce.' WHERE id = 115;
+UPDATE countries SET summary = 'Lithuania offers apples, berries, and garden pears.' WHERE id = 116;
+UPDATE countries SET summary = 'Luxembourg is known for pears, apples, and small-lot vineyards.' WHERE id = 117;
+UPDATE countries SET summary = 'Macao enjoys lychee, longan, and citrus with subtropical imports.' WHERE id = 118;
+UPDATE countries SET summary = 'Madagascar is famous for vanilla, lychee, and tropical fruit diversity.' WHERE id = 119;
+UPDATE countries SET summary = 'Malawi grows bananas, mangoes, and tea-region fruits.' WHERE id = 120;
+UPDATE countries SET summary = 'Malaysia is the home of durian and grows rambutan, mangosteen, and pineapples.' WHERE id = 121;
+UPDATE countries SET summary = 'Maldives relies on coconuts, breadfruit, and imported fruit staples.' WHERE id = 122;
+UPDATE countries SET summary = 'Mali features baobab fruit, dates, and oasis citrus.' WHERE id = 123;
+UPDATE countries SET summary = 'Malta produces Mediterranean figs, citrus, and grapes.' WHERE id = 124;
+UPDATE countries SET summary = 'Marshall Islands rely on breadfruit and coconuts across atolls.' WHERE id = 125;
+UPDATE countries SET summary = 'Martinique grows guava, mangoes, bananas, and passionfruit.' WHERE id = 126;
+UPDATE countries SET summary = 'Mauritania oases center on date palms with limited orchard fruit.' WHERE id = 127;
+UPDATE countries SET summary = 'Mauritius is known for lychee, mangoes, and tropical fruit.' WHERE id = 128;
+UPDATE countries SET summary = 'Mayotte produces bananas, lychee, and tropical citrus.' WHERE id = 129;
+UPDATE countries SET summary = 'Mexico is a global leader in avocados, limes, mangoes, and berries.' WHERE id = 130;
+UPDATE countries SET summary = 'Micronesia relies on coconuts, breadfruit, and bananas.' WHERE id = 131;
+UPDATE countries SET summary = 'Moldova grows apples, plums, and grapes for wine.' WHERE id = 132;
+UPDATE countries SET summary = 'Monaco imports fine fruit and features boutique grapes from nearby regions.' WHERE id = 133;
+UPDATE countries SET summary = 'Mongolia grows hardy melons and berries during short summers.' WHERE id = 134;
+UPDATE countries SET summary = 'Montenegro produces grapes, figs, and Mediterranean orchard fruit.' WHERE id = 135;
+UPDATE countries SET summary = 'Montserrat grows bananas, mangoes, and other Caribbean fruits.' WHERE id = 136;
+UPDATE countries SET summary = 'Morocco exports oranges and grows olives, dates, and figs.' WHERE id = 137;
+UPDATE countries SET summary = 'Mozambique produces cashew, mango, coconut, and citrus along the coast.' WHERE id = 138;
+UPDATE countries SET summary = 'Myanmar is rich in mangoes, bananas, and tropical fruit diversity.' WHERE id = 139;
+UPDATE countries SET summary = 'Namibia cultivates table grapes along river valleys and subtropical fruit in oases.' WHERE id = 140;
+UPDATE countries SET summary = 'Nauru relies on pandanus, coconuts, and imported fruits.' WHERE id = 141;
+UPDATE countries SET summary = 'Nepal produces crisp Himalayan apples and subtropical citrus.' WHERE id = 142;
+UPDATE countries SET summary = 'Netherlands grows pears, apples, and greenhouse strawberries.' WHERE id = 143;
+UPDATE countries SET summary = 'New Caledonia features pineapples, bananas, and tropical citrus.' WHERE id = 144;
+UPDATE countries SET summary = 'New Zealand is famous for kiwifruit, apples, and wine grapes.' WHERE id = 145;
+UPDATE countries SET summary = 'Nicaragua grows mangoes, plantains, and pitaya across tropical climates.' WHERE id = 146;
+UPDATE countries SET summary = 'Niger cultivates dates in desert oases with limited orchard fruit.' WHERE id = 147;
+UPDATE countries SET summary = 'Nigeria produces palm fruit, citrus, mangoes, and pineapples.' WHERE id = 148;
+UPDATE countries SET summary = 'Niue grows bananas, taro-adjacent crops, and backyard tropical fruit.' WHERE id = 149;
+UPDATE countries SET summary = 'Norfolk Island yields pineapples and subtropical garden fruit.' WHERE id = 150;
+UPDATE countries SET summary = 'North Macedonia grows apples, plums, and vineyard grapes.' WHERE id = 151;
+UPDATE countries SET summary = 'Northern Mariana Islands produce papaya, bananas, and coconuts.' WHERE id = 152;
+UPDATE countries SET summary = 'Norway highlights wild cloudberries, lingonberries, and blueberries.' WHERE id = 153;
+UPDATE countries SET summary = 'Oman is renowned for dates and coastal citrus.' WHERE id = 154;
+UPDATE countries SET summary = 'Pakistan is celebrated for sweet mangoes, citrus, and dates.' WHERE id = 155;
+UPDATE countries SET summary = 'Palau features coconuts, breadfruit, and tropical bananas.' WHERE id = 156;
+UPDATE countries SET summary = 'Palestine cultivates olives, figs, grapes, and citrus.' WHERE id = 157;
+UPDATE countries SET summary = 'Panama exports bananas and grows pineapples and papayas.' WHERE id = 158;
+UPDATE countries SET summary = 'Papua New Guinea grows papaya, bananas, and taro-adjacent staples with fruit trees.' WHERE id = 159;
+UPDATE countries SET summary = 'Paraguay produces citrus, mangoes, and subtropical orchard fruit.' WHERE id = 160;
+UPDATE countries SET summary = 'Peru exports avocados and grapes and grows mangoes along the coast.' WHERE id = 161;
+UPDATE countries SET summary = 'Philippines is famed for sweet carabao mangoes, bananas, and pineapples.' WHERE id = 162;
+UPDATE countries SET summary = 'Pitcairn gardens yield bananas, citrus, and seasonal tropical fruit.' WHERE id = 163;
+UPDATE countries SET summary = 'Poland is a European leader in apples, plus berries and plums.' WHERE id = 164;
+UPDATE countries SET summary = 'Portugal grows wine grapes, citrus, figs, and olives.' WHERE id = 165;
+UPDATE countries SET summary = 'Puerto Rico produces pineapples, bananas, and tropical orchard fruit.' WHERE id = 166;
+UPDATE countries SET summary = 'Qatar features oasis dates and imported fruits for variety.' WHERE id = 167;
+UPDATE countries SET summary = 'Réunion grows lychee, vanilla, and abundant tropical fruit.' WHERE id = 168;
+UPDATE countries SET summary = 'Romania is known for plums, apples, and orchard brandies.' WHERE id = 169;
+UPDATE countries SET summary = 'Russian Federation features berries, apples, and northern orchard fruit.' WHERE id = 170;
+UPDATE countries SET summary = 'Rwanda supports banana, pineapple, and passionfruit on volcanic soils.' WHERE id = 171;
+UPDATE countries SET summary = 'Saint Barthélemy offers coconuts and imported tropical fruit.' WHERE id = 172;
+UPDATE countries SET summary = 'Saint Helena grows figs, bananas, and garden fruit on remote islands.' WHERE id = 173;
+UPDATE countries SET summary = 'Saint Kitts and Nevis cultivates guava, sugarcane, and citrus.' WHERE id = 174;
+UPDATE countries SET summary = 'Saint Lucia produces mangoes, papayas, and bananas.' WHERE id = 175;
+UPDATE countries SET summary = 'Saint Martin features pineapples, bananas, and market fruit from nearby islands.' WHERE id = 176;
+UPDATE countries SET summary = 'Saint Pierre and Miquelon enjoy short-season wild berries and imports.' WHERE id = 177;
+UPDATE countries SET summary = 'Saint Vincent and the Grenadines exports nutmeg and grows tropical fruit.' WHERE id = 178;
+UPDATE countries SET summary = 'Samoa abounds with coconuts, breadfruit, bananas, and taro-side orchards.' WHERE id = 179;
+UPDATE countries SET summary = 'San Marino shares Italian fruit culture with grapes, figs, and stone fruit.' WHERE id = 180;
+UPDATE countries SET summary = 'Sao Tome and Principe is famous for cocoa and tropical fruit.' WHERE id = 181;
+UPDATE countries SET summary = 'Saudi Arabia leads in dates and grows citrus in irrigated oases.' WHERE id = 182;
+UPDATE countries SET summary = 'Senegal features groundnuts, baobab fruit, and mangoes.' WHERE id = 183;
+UPDATE countries SET summary = 'Serbia excels in plums, raspberries, and orchard brandies.' WHERE id = 184;
+UPDATE countries SET summary = 'Seychelles offers coconuts, breadfruit, and tropical orchard produce.' WHERE id = 185;
+UPDATE countries SET summary = 'Sierra Leone grows mangoes, pineapples, and bananas in humid tropics.' WHERE id = 186;
+UPDATE countries SET summary = 'Singapore celebrates durian, tropical imports, and regional fruit diversity.' WHERE id = 187;
+UPDATE countries SET summary = 'Sint Maarten produces papaya and bananas and trades in regional fruit.' WHERE id = 188;
+UPDATE countries SET summary = 'Slovakia grows apples, pears, and plums from temperate orchards.' WHERE id = 189;
+UPDATE countries SET summary = 'Slovenia produces grapes, apples, and Mediterranean figs in the southwest.' WHERE id = 190;
+UPDATE countries SET summary = 'Solomon Islands rely on coconuts, bananas, and breadfruit.' WHERE id = 191;
+UPDATE countries SET summary = 'Somalia cultivates bananas, dates, and limes along river plains.' WHERE id = 192;
+UPDATE countries SET summary = 'South Africa is renowned for wine grapes, citrus, and apples.' WHERE id = 193;
+UPDATE countries SET summary = 'South Georgia and the South Sandwich Islands have no local fruit; supplies are shipped.' WHERE id = 194;
+UPDATE countries SET summary = 'South Sudan grows mangoes, papayas, and sorghum-side orchards.' WHERE id = 195;
+UPDATE countries SET summary = 'Spain is world-famous for oranges, olives, grapes, and figs.' WHERE id = 196;
+UPDATE countries SET summary = 'Sri Lanka features coconuts, mangoes, and jackfruit across the island.' WHERE id = 197;
+UPDATE countries SET summary = 'Sudan oases produce dates with limited citrus along the Nile.' WHERE id = 198;
+UPDATE countries SET summary = 'Suriname grows bananas, coconuts, and tropical market fruit.' WHERE id = 199;
+UPDATE countries SET summary = 'Svalbard has a brief season for wild Arctic berries; most fruit is imported.' WHERE id = 200;
+UPDATE countries SET summary = 'Sweden highlights lingonberries, blueberries, and apples in the south.' WHERE id = 201;
+UPDATE countries SET summary = 'Switzerland features apples, pears, and Alpine vineyard grapes.' WHERE id = 202;
+UPDATE countries SET summary = 'Syrian Arab Republic grows dates, citrus, olives, and figs in irrigated zones.' WHERE id = 203;
+UPDATE countries SET summary = 'Taiwan produces pineapples, bananas, guavas, and tea-region fruit.' WHERE id = 204;
+UPDATE countries SET summary = 'Tajikistan is known for sweet apricots, grapes, and melons.' WHERE id = 205;
+UPDATE countries SET summary = 'Tanzania grows bananas, cashew apples, mangoes, and citrus.' WHERE id = 206;
+UPDATE countries SET summary = 'Thailand is famous for durian, mangoes, rambutan, and longan.' WHERE id = 207;
+UPDATE countries SET summary = 'Timor-Leste farms bananas, papayas, coconuts, and small orchard fruit.' WHERE id = 208;
+UPDATE countries SET summary = 'Togo supports mangoes, citrus, and pineapples in tropical zones.' WHERE id = 209;
+UPDATE countries SET summary = 'Tokelau depends on coconuts, breadfruit, and pandanus on low atolls.' WHERE id = 210;
+UPDATE countries SET summary = 'Tonga grows vanilla, bananas, and root crops with home fruit trees.' WHERE id = 211;
+UPDATE countries SET summary = 'Trinidad and Tobago produces citrus, cocoa, and tropical fruit.' WHERE id = 212;
+UPDATE countries SET summary = 'Tunisia is a Mediterranean producer of olives, dates, and citrus.' WHERE id = 213;
+UPDATE countries SET summary = 'Turkey is renowned for figs, apricots, grapes, and hazelnuts.' WHERE id = 214;
+UPDATE countries SET summary = 'Turkmenistan values sweet melons, grapes, and desert oasis fruit.' WHERE id = 215;
+UPDATE countries SET summary = 'Turks and Caicos Islands feature coconuts and imported market fruit.' WHERE id = 216;
+UPDATE countries SET summary = 'Tuvalu staples include breadfruit, coconuts, and bananas.' WHERE id = 217;
+UPDATE countries SET summary = 'Uganda is one of Africas largest banana producers and grows pineapples and mangoes.' WHERE id = 218;
+UPDATE countries SET summary = 'Ukraine grows berries, apples, and orchard fruit across fertile plains.' WHERE id = 219;
+UPDATE countries SET summary = 'United Arab Emirates cultivates dates in oases and imports a wide range of fruit.' WHERE id = 220;
+UPDATE countries SET summary = 'United Kingdom produces apples, berries, and greenhouse tomatoes and cucumbers.' WHERE id = 221;
+UPDATE countries SET summary = 'United States spans cranberries, citrus, berries, apples, and grapes across regions.' WHERE id = 222;
+UPDATE countries SET summary = 'United States Minor Outlying Islands rely on coconuts and imported fruit.' WHERE id = 223;
+UPDATE countries SET summary = 'Uruguay grows wine grapes, citrus, and orchard fruit in a temperate climate.' WHERE id = 224;
+UPDATE countries SET summary = 'Uzbekistan is known for sun-dried apricots, raisins, and melons.' WHERE id = 225;
+UPDATE countries SET summary = 'Vanuatu produces pineapples, coconuts, and bananas on volcanic soils.' WHERE id = 226;
+UPDATE countries SET summary = 'Venezuela is famous for fine-flavor cocoa and tropical fruits.' WHERE id = 227;
+UPDATE countries SET summary = 'Viet Nam cultivates dragonfruit, lychee, longan, and citrus in diverse zones.' WHERE id = 228;
+UPDATE countries SET summary = 'Virgin Islands British grow bananas and tropical fruit with imports from the region.' WHERE id = 229;
+UPDATE countries SET summary = 'Virgin Islands US produce mangoes, guavas, and market fruit from nearby islands.' WHERE id = 230;
+UPDATE countries SET summary = 'Wallis and Futuna rely on coconuts, breadfruit, and garden bananas.' WHERE id = 231;
+UPDATE countries SET summary = 'Western Sahara oases sustain date palms and imported fruit supplies.' WHERE id = 232;
+UPDATE countries SET summary = 'Yemen highlands are historic for coffee cherries and also grow dates and citrus.' WHERE id = 233;
+UPDATE countries SET summary = 'Zambia grows groundnuts, mangoes, and diverse tropical fruit.' WHERE id = 234;
+UPDATE countries SET summary = 'Zimbabwe produces guava, citrus, mangoes, and other orchard fruit.' WHERE id = 235;
 </sql><current_tab id="0"/></tab_sql></sqlb_project>
