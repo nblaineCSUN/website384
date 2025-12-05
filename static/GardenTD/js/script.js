@@ -111,16 +111,16 @@ function reachedEnd(enemy, end) {
 }
 
 function animate() {
-  // If paused or game over, don't schedule another frame.
+  // If paused or game over, no next frame.
   if (isPaused || isGameOver) {
-    animationID = null; // mark as not running
+    animationID = null; 
     return;
   }
 
-  // Schedule the NEXT frame (assign to the GLOBAL)
+  // Schedule next frame
   animationID = requestAnimationFrame(animate);
 
-  // --- your game rendering/update code ---
+  // ---game rendering/update code ---
   c.drawImage(image, 0, 0);
 
   for (let i = enemies.length - 1; i >= 0; i--) {

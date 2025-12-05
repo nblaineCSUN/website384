@@ -53,30 +53,30 @@ def space_page():
 def backhome_page():
     return render_template("backhome.html")
 
-#FEATURED FRUIT
-@app.route("/coconuts")
-def coconuts_page():
-    return render_template("featuredfruit/coconuts.html")
+# #FEATURED FRUIT
+# @app.route("/coconuts")
+# def coconuts_page():
+#     return render_template("featuredfruit/coconuts.html")
 
-@app.route("/bananas")
-def bananas_page():
-    return render_template("featuredfruit/bananas.html")
+# @app.route("/bananas")
+# def bananas_page():
+#     return render_template("featuredfruit/bananas.html")
 
-@app.route("/pineapples")
-def pineapples_page():
-    return render_template("featuredfruit/pineapples.html")
+# @app.route("/pineapples")
+# def pineapples_page():
+#     return render_template("featuredfruit/pineapples.html")
 
-@app.route("/strawberries")
-def strawberries_page():
-    return render_template("featuredfruit/strawberries.html")
+# @app.route("/strawberries")
+# def strawberries_page():
+#     return render_template("featuredfruit/strawberries.html")
 
-@app.route("/grapes")
-def grapes_page():
-    return render_template("featuredfruit/grapes.html")
+# @app.route("/grapes")
+# def grapes_page():
+#     return render_template("featuredfruit/grapes.html")
 
-@app.route("/watermelons")
-def watermelons_page():
-    return render_template("featuredfruit/watermelons.html")
+# @app.route("/watermelons")
+# def watermelons_page():
+#     return render_template("featuredfruit/watermelons.html")
 
 # GAME
 @app.route("/garden")
